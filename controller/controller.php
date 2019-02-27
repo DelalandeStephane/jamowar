@@ -1,6 +1,9 @@
 <?php
 //page d'accueil
-function menuPage()
-{
+function menuPage() {
 	require('view/menu.php');
+}
+//Selection du perssonage
+function playerChoice() {
+	require('view/playerchoice.php');
 }

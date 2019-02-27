@@ -73,6 +73,8 @@ body {
 /* line 8, ../scss/_general.scss */
 a {
   text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
 }
 
 /* line 2, ../scss/_button.scss */
@@ -81,18 +83,16 @@ a {
   display: block;
   max-width: 400px;
   height: 45px;
-  font-family: 'Press Start 2P', cursive;
   text-align: center;
   padding-top: 20px;
   font-size: 1.5em;
 }
 
-/* line 13, ../scss/_button.scss */
+/* line 12, ../scss/_button.scss */
 .red {
   background: #f0082a;
-  color: white;
 }
-/* line 16, ../scss/_button.scss */
+/* line 14, ../scss/_button.scss */
 .red:hover {
   background: #1d88f5;
 }
@@ -111,18 +111,44 @@ a {
   margin-bottom: 40px;
 }
 /* line 14, ../scss/_menu.scss */
-.menu-bg nav {
+.menu-bg #main-nav {
   margin-top: 200px;
 }
 
 /* line 18, ../scss/_menu.scss */
-header {
+#main-header {
   margin: auto;
   width: 600px;
 }
 /* line 22, ../scss/_menu.scss */
-header .logo-header {
+#main-header .logo-header {
   width: 600px;
   height: 80px;
   margin-top: 20px;
+}
+
+/* line 1, ../scss/_navbar.scss */
+.logo-navbar {
+  width: 280px;
+  height: 40px;
+}
+
+/* line 6, ../scss/_navbar.scss */
+.secondary-header {
+  background: #160f1e;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 11, ../scss/_navbar.scss */
+.secondary-header ul {
+  display: flex;
+  margin-top: 17px;
+}
+/* line 15, ../scss/_navbar.scss */
+.secondary-header a {
+  margin-right: 30px;
+}
+/* line 18, ../scss/_navbar.scss */
+.secondary-header a:hover {
+  color: #1d88f5;
 }
