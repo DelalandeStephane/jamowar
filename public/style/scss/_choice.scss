@@ -1,0 +1,25 @@
+#player-select {
+	display: flex;
+	justify-content: center;
+	margin-top: 200px;
+}
+
+.player-definition {
+	img {
+		width: 200px;
+		height: 200px;
+	}
+	figcaption {
+		background: $red;
+		text-align: center;
+		padding: 10px;
+	}
+	border:10px solid $red;
+	border-radius:5px;
+	margin:0 40px;
+
+	&:hover{
+		border:10px solid $blue;
+	}
+	
+}

@@ -11,7 +11,7 @@
 			<img src="public/img/logo.png" class="logo-navbar">
 			<nav class="secondary-nav">
 				<ul>
-					<li><a href="#">Accueil</a></li>
+					<li><a href="?action=home">Accueil</a></li>
 					<li><a href="#">Jouer</a></li>
 					<li><a href="#">Mode libre</a></li>
 				</ul>

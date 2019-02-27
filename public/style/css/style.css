@@ -68,9 +68,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 4, ../scss/_general.scss */
 body {
   background: #160f1e;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
 }
 
-/* line 8, ../scss/_general.scss */
+/* line 10, ../scss/_general.scss */
 a {
   text-decoration: none;
   font-family: 'Press Start 2P', cursive;
@@ -151,4 +153,33 @@ a {
 /* line 18, ../scss/_navbar.scss */
 .secondary-header a:hover {
   color: #1d88f5;
+}
+
+/* line 1, ../scss/_choice.scss */
+#player-select {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+/* line 7, ../scss/_choice.scss */
+.player-definition {
+  border: 10px solid #f0082a;
+  border-radius: 5px;
+  margin: 0 40px;
+}
+/* line 8, ../scss/_choice.scss */
+.player-definition img {
+  width: 200px;
+  height: 200px;
+}
+/* line 12, ../scss/_choice.scss */
+.player-definition figcaption {
+  background: #f0082a;
+  text-align: center;
+  padding: 10px;
+}
+/* line 21, ../scss/_choice.scss */
+.player-definition:hover {
+  border: 10px solid #1d88f5;
 }
