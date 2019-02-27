@@ -1,0 +1,31 @@
+.menu-bg {
+	background: url('../../img/bg/bg1.jpg');
+	background-size: cover;
+	background-repeat:no-repeat;
+
+	max-width: 1200px;
+	margin: auto;
+	min-height: 100vh;
+
+	.button {
+		margin-bottom: 40px;
+	}
+
+	nav {
+		margin-top: 200px;
+	}
+}
+header {
+	margin: auto;
+	 width: 600px;
+
+	.logo-header {	  
+		width: 600px;
+	  	height: 80px;
+	  	margin-top: 20px;	
+	}
+}
+
+
+
+
