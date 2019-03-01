@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="public/style/css/style.css">
 </head>
 <body>
-	<div class="menu-bg">
+	<div class="bg menu-bg">
 		<header id="main-header"><h1><img class="logo-header" src="public/img/logo.png"></h1></header>
 		<nav id="main-nav">
 			<ul>

@@ -79,6 +79,15 @@ a {
   color: white;
 }
 
+/* line 16, ../scss/_general.scss */
+.bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+}
+
 /* line 2, ../scss/_button.scss */
 .button {
   margin: auto;
@@ -102,27 +111,22 @@ a {
 /* line 1, ../scss/_menu.scss */
 .menu-bg {
   background: url("../../img/bg/bg1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 1200px;
-  margin: auto;
-  min-height: 100vh;
 }
-/* line 10, ../scss/_menu.scss */
+/* line 3, ../scss/_menu.scss */
 .menu-bg .button {
   margin-bottom: 40px;
 }
-/* line 14, ../scss/_menu.scss */
+/* line 7, ../scss/_menu.scss */
 .menu-bg #main-nav {
   margin-top: 200px;
 }
 
-/* line 18, ../scss/_menu.scss */
+/* line 11, ../scss/_menu.scss */
 #main-header {
   margin: auto;
   width: 600px;
 }
-/* line 22, ../scss/_menu.scss */
+/* line 15, ../scss/_menu.scss */
 #main-header .logo-header {
   width: 600px;
   height: 80px;
@@ -182,4 +186,100 @@ a {
 /* line 21, ../scss/_choice.scss */
 .player-definition:hover {
   border: 10px solid #1d88f5;
+}
+
+/* line 1, ../scss/_stage.scss */
+.stage-1 {
+  background: url("../../img/bg/bg2.jpg");
+}
+
+/* line 5, ../scss/_stage.scss */
+#synth {
+  display: flex;
+  justify-content: center;
+  width: 490px;
+  margin: auto;
+  margin-top: 300px;
+  position: relative;
+  background: linear-gradient(black 30%, rgba(38, 102, 209, 0.7));
+  border-radius: 30px;
+  padding: 20px 45px;
+}
+
+/* line 16, ../scss/_stage.scss */
+.key {
+  cursor: pointer;
+}
+
+/* line 19, ../scss/_stage.scss */
+.white {
+  width: 70px;
+  height: 300px;
+  background: white;
+  border: solid black 1px;
+}
+
+/* line 25, ../scss/_stage.scss */
+.black {
+  background: black;
+  position: absolute;
+  width: 45px;
+  height: 170px;
+}
+
+/* line 31, ../scss/_stage.scss */
+#do-d {
+  left: 93px;
+}
+
+/* line 34, ../scss/_stage.scss */
+#re-d {
+  left: 163px;
+}
+
+/* line 37, ../scss/_stage.scss */
+#fa-d {
+  left: 304px;
+}
+
+/* line 40, ../scss/_stage.scss */
+#sol-d {
+  left: 374px;
+}
+
+/* line 44, ../scss/_stage.scss */
+#la-d {
+  left: 443px;
+}
+
+/* line 48, ../scss/_stage.scss */
+.fight-scene {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+/* line 53, ../scss/_stage.scss */
+.fight-scene p {
+  color: red;
+  font-size: 1.9em;
+  margin-top: 100px;
+}
+
+/* line 60, ../scss/_stage.scss */
+.block-player {
+  display: flex;
+}
+/* line 63, ../scss/_stage.scss */
+.block-player img {
+  width: 150px;
+  height: 150px;
+}
+
+/* line 69, ../scss/_stage.scss */
+.health-bar {
+  background: black;
+  width: 300px;
+  height: 50px;
+  margin: 0 20px;
+  margin-top: 90px;
 }

@@ -7,3 +7,7 @@ function menuPage() {
 function playerChoice() {
 	require('view/playerchoice.php');
 }
+
+function showStage() {
+	require('view/Stage.php');
+}

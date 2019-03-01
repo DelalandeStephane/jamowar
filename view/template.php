@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="public/style/css/style.css">
 </head>
 <body>
-	<div class="<?= $bg ?>">
+	<div class="bg <?= $bgImg ?>">
 		<header class="secondary-header">
 			<img src="public/img/logo.png" class="logo-navbar">
 			<nav class="secondary-nav">
@@ -18,6 +18,9 @@
 			</nav>
 		</header>
 	<?= $content ?>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>
 </div>
 </body>
 </html>
