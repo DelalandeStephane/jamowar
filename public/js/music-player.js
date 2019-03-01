@@ -1,49 +1,47 @@
 //synthetiser
 
-$(function() {
-
-	const musicPlayer = 
+	var musicPlayer = 
 	{
 		 keysEntry :[] ,
-		 keysData : ['do','do'],
+		 //keysData : ['do','do'],
 
 		keyPlayer:  function(key){
 			switch(key) {
 			case 'do':
-				$('#playerAudio').attr('src','key/do.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/do.mp3');
 			break;
 			case 'do-d' :
-				$('#playerAudio').attr('src','key/do-d.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/do-d.mp3');
 			break;
 			case 're':
-				$('#playerAudio').attr('src','key/re.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/re.mp3');
 			break;
 			case 're-d' :
-				$('#playerAudio').attr('src','key/re-d.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/re-d.mp3');
 			break;
 			case 'mi' :
-				$('#playerAudio').attr('src','key/mi.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/mi.mp3');
 			break;
 			case 'fa' :
-				$('#playerAudio').attr('src','key/fa.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/fa.mp3');
 			break;
 			case 'fa-d' :
-				$('#playerAudio').attr('src','key/fa-d.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/fa-d.mp3');
 			break;
 			case 'sol' :
-				$('#playerAudio').attr('src','key/sol.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/sol.mp3');
 			break;
 			case 'sol-d' :
-				$('#playerAudio').attr('src','key/sol-d.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/sol-d.mp3');
 			break;
 			case 'la' :
-				$('#playerAudio').attr('src','key/la.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/la.mp3');
 			break;
 			case 'la-d' :
-				$('#playerAudio').attr('src','key/la-d.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/la-d.mp3');
 			break;
 			case 'si' :
-				$('#playerAudio').attr('src','key/si.wav');
+				$('#playerAudio').attr('src','public/sound/key/p1/si.mp3');
 			break;
 			}
 		},
@@ -94,4 +92,3 @@ $(function() {
 
 	}
 
-})

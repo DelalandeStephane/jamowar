@@ -29,6 +29,8 @@
 	<div class="key white" id="si"></div>		
 </div>
 
+<button id="test">tester</button><!-- Pour test dev -->
+<audio id="playerAudio"  autoplay></audio>
 <!--<audio id="back-music" src="public/sound/song/song1.mp3" autoplay="" loop=""></audio>-->
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php');?>
