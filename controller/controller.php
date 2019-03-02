@@ -1,4 +1,5 @@
 <?php
+require_once('model/gameManager.php');
 //page d'accueil
 function menuPage() {
 	require('view/menu.php');
@@ -9,5 +10,9 @@ function playerChoice() {
 }
 
 function showStage() {
+	$gameManager = new GameManager();
+	$player=$_GET['player'];
+	$riffs = $gameManager->riffSelector($player);
+	 $bgImg ='stage-'.$player;
 	require('view/Stage.php');
 }

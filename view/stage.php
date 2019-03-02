@@ -1,8 +1,8 @@
-<?php $bgImg ='stage-1' ?>
+
 <?php ob_start();?>
 <section class="fight-scene">
 	<div class="block-player">
-		<img src="public/img/player/p1s.jpg">
+		<img src="public/img/player/p<?= $player ?>s.jpg">
 		<div class="health-bar"></div>
 	</div>
 	<p>VS</p>

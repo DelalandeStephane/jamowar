@@ -5,43 +5,43 @@
 		 keysEntry :[] ,
 		 //keysData : ['do','do'],
 
-		keyPlayer:  function(key){
+		keyPlayer:  function(key,player){
 			switch(key) {
 			case 'do':
-				$('#playerAudio').attr('src','public/sound/key/p1/do.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/do.mp3');
 			break;
 			case 'do-d' :
-				$('#playerAudio').attr('src','public/sound/key/p1/do-d.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/do-d.mp3');
 			break;
 			case 're':
-				$('#playerAudio').attr('src','public/sound/key/p1/re.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/re.mp3');
 			break;
 			case 're-d' :
-				$('#playerAudio').attr('src','public/sound/key/p1/re-d.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/re-d.mp3');
 			break;
 			case 'mi' :
-				$('#playerAudio').attr('src','public/sound/key/p1/mi.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/mi.mp3');
 			break;
 			case 'fa' :
-				$('#playerAudio').attr('src','public/sound/key/p1/fa.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/fa.mp3');
 			break;
 			case 'fa-d' :
-				$('#playerAudio').attr('src','public/sound/key/p1/fa-d.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/fa-d.mp3');
 			break;
 			case 'sol' :
-				$('#playerAudio').attr('src','public/sound/key/p1/sol.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/sol.mp3');
 			break;
 			case 'sol-d' :
-				$('#playerAudio').attr('src','public/sound/key/p1/sol-d.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/sol-d.mp3');
 			break;
 			case 'la' :
-				$('#playerAudio').attr('src','public/sound/key/p1/la.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/la.mp3');
 			break;
 			case 'la-d' :
-				$('#playerAudio').attr('src','public/sound/key/p1/la-d.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/la-d.mp3');
 			break;
 			case 'si' :
-				$('#playerAudio').attr('src','public/sound/key/p1/si.mp3');
+				$('#playerAudio').attr('src','public/sound/key/'+player+'/si.mp3');
 			break;
 			}
 		},
@@ -91,4 +91,3 @@
 		}
 
 	}
-

@@ -193,7 +193,17 @@ a {
   background: url("../../img/bg/bg2.jpg");
 }
 
-/* line 5, ../scss/_stage.scss */
+/* line 4, ../scss/_stage.scss */
+.stage-2 {
+  background: url("../../img/bg/bg3.jpg");
+}
+
+/* line 7, ../scss/_stage.scss */
+.stage-3 {
+  background: url("../../img/bg/bg4.jpg");
+}
+
+/* line 11, ../scss/_stage.scss */
 #synth {
   display: flex;
   justify-content: center;
@@ -206,12 +216,12 @@ a {
   padding: 20px 45px;
 }
 
-/* line 16, ../scss/_stage.scss */
+/* line 22, ../scss/_stage.scss */
 .key {
   cursor: pointer;
 }
 
-/* line 19, ../scss/_stage.scss */
+/* line 25, ../scss/_stage.scss */
 .white {
   width: 70px;
   height: 300px;
@@ -219,7 +229,7 @@ a {
   border: solid black 1px;
 }
 
-/* line 25, ../scss/_stage.scss */
+/* line 31, ../scss/_stage.scss */
 .black {
   background: black;
   position: absolute;
@@ -227,55 +237,55 @@ a {
   height: 170px;
 }
 
-/* line 31, ../scss/_stage.scss */
+/* line 37, ../scss/_stage.scss */
 #do-d {
   left: 93px;
 }
 
-/* line 34, ../scss/_stage.scss */
+/* line 40, ../scss/_stage.scss */
 #re-d {
   left: 163px;
 }
 
-/* line 37, ../scss/_stage.scss */
+/* line 43, ../scss/_stage.scss */
 #fa-d {
   left: 304px;
 }
 
-/* line 40, ../scss/_stage.scss */
+/* line 46, ../scss/_stage.scss */
 #sol-d {
   left: 374px;
 }
 
-/* line 44, ../scss/_stage.scss */
+/* line 50, ../scss/_stage.scss */
 #la-d {
   left: 443px;
 }
 
-/* line 48, ../scss/_stage.scss */
+/* line 54, ../scss/_stage.scss */
 .fight-scene {
   display: flex;
   justify-content: space-between;
   margin: 30px;
 }
-/* line 53, ../scss/_stage.scss */
+/* line 59, ../scss/_stage.scss */
 .fight-scene p {
   color: red;
   font-size: 1.9em;
   margin-top: 100px;
 }
 
-/* line 60, ../scss/_stage.scss */
+/* line 66, ../scss/_stage.scss */
 .block-player {
   display: flex;
 }
-/* line 63, ../scss/_stage.scss */
+/* line 69, ../scss/_stage.scss */
 .block-player img {
   width: 150px;
   height: 150px;
 }
 
-/* line 69, ../scss/_stage.scss */
+/* line 75, ../scss/_stage.scss */
 .health-bar {
   background: black;
   width: 300px;
