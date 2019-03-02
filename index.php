@@ -17,6 +17,9 @@ try {
             	throw new Exception('Erreur : aucun joueur selectionné');
             }
 		}
+		elseif($_GET['action'] == 'freemode'){
+			freeMode();
+		}
 
 		
 		

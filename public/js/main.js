@@ -26,18 +26,13 @@ $(function() {
 	})
 
 	$('.player-selected').on('click', function(e){
+		musicPlayer.soundSelector($(this).attr('id'));
+	});
 
-		switch($(this).attr('id')) {
-			case 'player-1':
-				sessionStorage.setItem("player", 'p1');
-			break;
-			case 'player-2':
-				sessionStorage.setItem("player", 'p2');
-			break;
-			case 'player-3':
-			sessionStorage.setItem("player", 'p2');
-			break;
-		}
+	$('.free-player-selected').on('click', function(e){
+		e.preventDefault();
+		musicPlayer.soundSelector($(this).attr('id'));
+		
 	});
 
 });		

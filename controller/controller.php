@@ -16,3 +16,8 @@ function showStage() {
 	 $bgImg ='stage-'.$player;
 	require('view/Stage.php');
 }
+
+
+function freeMode() {
+	require('view/freemode.php');
+}

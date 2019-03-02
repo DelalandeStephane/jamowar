@@ -88,6 +88,19 @@
 				break;
 			}
 			return playedKey;		
+		},
+		soundSelector: function(player) {
+			switch(player) {
+			case 'player-1':
+				sessionStorage.setItem("player", 'p1');
+			break;
+			case 'player-2':
+				sessionStorage.setItem("player", 'p2');
+			break;
+			case 'player-3':
+			sessionStorage.setItem("player", 'p2');
+			break;
+		}
 		}
 
 	}
