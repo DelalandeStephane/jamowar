@@ -35,7 +35,6 @@
 		<div class="key black" id="la-d"></div>
 		<div class="key white" id="si"></div>		
 	</div>
-	<audio id="playerAudio"  autoplay></audio>
 </div>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php');?>

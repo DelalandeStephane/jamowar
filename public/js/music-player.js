@@ -1,51 +1,52 @@
 //synthetiser
-
 	var musicPlayer = 
 	{
 		 keysEntry :[] ,
+
 		 //keysData : ['do','do'],
 
 		keyPlayer:  function(key,player){
+			const note= new Audio();
 			switch(key) {
 			case 'do':
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/do.mp3');
+				note.src='public/sound/key/'+player+'/do.mp3';
 			break;
 			case 'do-d' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/do-d.mp3');
+				note.src='public/sound/key/'+player+'/do-d.mp3';
 			break;
 			case 're':
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/re.mp3');
+				note.src='public/sound/key/'+player+'/re.mp3';
 			break;
 			case 're-d' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/re-d.mp3');
+				note.src='public/sound/key/'+player+'/re-d.mp3';
 			break;
 			case 'mi' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/mi.mp3');
+				note.src='public/sound/key/'+player+'/mi.mp3';
 			break;
 			case 'fa' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/fa.mp3');
+				note.src='public/sound/key/'+player+'/fa.mp3';
 			break;
 			case 'fa-d' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/fa-d.mp3');
+				note.src='public/sound/key/'+player+'/fa-d.mp3';
 			break;
 			case 'sol' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/sol.mp3');
+				note.src='public/sound/key/'+player+'/sol.mp3';
 			break;
 			case 'sol-d' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/sol-d.mp3');
+				note.src='public/sound/key/'+player+'/sol-d.mp3';
 			break;
 			case 'la' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/la.mp3');
+				note.src='public/sound/key/'+player+'/la.mp3';
 			break;
 			case 'la-d' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/la-d.mp3');
+				note.src='public/sound/key/'+player+'/la-d.mp3';
 			break;
 			case 'si' :
-				$('#playerAudio').attr('src','public/sound/key/'+player+'/si.mp3');
+				note.src='public/sound/key/'+player+'/si.mp3';
 			break;
 			}
+            note.play();
 		},
-
 		keyConvert: function(key){
 
 			let playedKey ;
