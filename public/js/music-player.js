@@ -3,8 +3,7 @@
 	{
 		 keysEntry :[] ,
 
-		 //keysData : ['do','do'],
-
+		 //Play sound 
 		keyPlayer:  function(key,player){
 			const note= new Audio();
 			switch(key) {
@@ -47,6 +46,7 @@
 			}
             note.play();
 		},
+		//Convert key code in music note 
 		keyConvert: function(key){
 
 			let playedKey ;
@@ -90,6 +90,7 @@
 			}
 			return playedKey;		
 		},
+		// Select player and sounds instrument
 		soundSelector: function(player) {
 			switch(player) {
 			case 'player-1':
@@ -101,7 +102,54 @@
 			case 'player-3':
 			sessionStorage.setItem("player", 'p2');
 			break;
+			}
+		},
+		// Select random riff in the list and return array notes
+		riffSelector: function (ret){
+			var riff = riffs[getRandomInt(riffs.length-1)];
+			var notes = riff.music_note.split(',');
+			console.log(notes);
+			var music = new Audio();
+			music.src = riff.sound;
+			music.play();
+			const dataKeys = notes; //Liste des notes 
+			sessionStorage['keys'] = notes;
+			sessionStorage['nb_note'] = dataKeys.length; 
+		
+	
+		},
+		//compare played notes with real notes 
+		noteCompare : function() {
+			if(nbPlay == sessionStorage['nb_note']) {
+			
+				notes = sessionStorage['keys'];
+				dataKeys = notes.split(',');
+				nbPlay=0;
+				success = 0 ;
+				for( let i = 0 ; i < sessionStorage['nb_note'] ; i++) {
+					if( musicPlayer.keysEntry[i] == dataKeys[i]) {
+						console.log('ok');
+						success++;
+					} 
+			};
+			//compare if all notes are find
+			if(success == sessionStorage['nb_note']) {
+				player1.health = player1.health-10;
+				setTimeout( musicPlayer.riffSelector, 2000);
+			} else {
+				player2.health = player2.health-10;
+				setTimeout( musicPlayer.riffSelector, 2000);
+			}
+			// send next riff			
+			
+
+			//Réinitialise le tableau saisie
+			musicPlayer.keysEntry = [];
+
+			console.log('life player 1 : '+player1.health);
+			console.log('life player 2 : '+player2.health);		
+			}
 		}
-		}
+		
 
 	}

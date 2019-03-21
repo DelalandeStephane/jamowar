@@ -3,11 +3,11 @@
 <section class="fight-scene">
 	<div class="block-player">
 		<img src="public/img/player/p<?= $player ?>s.jpg">
-		<div class="health-bar"></div>
+		<div class="health-bar"><div class="health-progress"></div></div>
 	</div>
 	<p>VS</p>
 	<div class="block-player">
-		<div class="health-bar"></div>
+		<div class="health-bar"><div class="health-progress"></div></div>
 		<img src="public/img/player/p2s.jpg">
 	</div>
 </section>
@@ -29,8 +29,8 @@
 	<div class="key white" id="si"></div>		
 </div>
 
-<button id="test">tester</button><!-- Pour test dev -->
-<audio id="playerAudio"  autoplay></audio>
+
 <!--<audio id="back-music" src="public/sound/song/song1.mp3" autoplay="" loop=""></audio>-->
 <?php $content = ob_get_clean(); ?>
+<?php $script='<script src="public/js/gameplay.js"></script>' ?>;
 <?php require('template.php');?>

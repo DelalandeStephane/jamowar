@@ -11,11 +11,14 @@ function playerChoice() {
 
 function showStage() {
 	$gameManager = new GameManager();
-	$player=$_GET['player'];
-	$riffs = $gameManager->riffSelector($player);
+	$player = $_GET['player'];
+	$riff = $gameManager->riffSelector($player);
+
+
 	 $bgImg ='stage-'.$player;
 	require('view/Stage.php');
 }
+
 
 
 function freeMode() {

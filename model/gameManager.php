@@ -1,5 +1,5 @@
 <?php
-require_once('model/Manager.php');
+require('model/Manager.php');
 
 class GameManager extends Manager 
 {
@@ -7,11 +7,10 @@ class GameManager extends Manager
 	public function __construct() {
 		$this->db= $this->dbConnect();
 	}
-	public function RiffSelector($id)
+	public function riffSelector($id)
 	{
-	    $req =$this->db->prepare('SELECT * FROM riff WHERE id_player = ?');
-	    $riffs = $req->execute(array($id));
-	    return $riffs;
+	    $req = $this->db->query('SELECT * FROM riff WHERE id_player = '.$id);
+	    return $req;
 	}
 	
 }
