@@ -1,4 +1,5 @@
-function ajaxGet(url, callback) {
+var tool = {
+	ajaxGet : function (url, callback) {
     var req = new XMLHttpRequest();
     req.open("GET", url);
     req.addEventListener("load", function () {
@@ -12,4 +13,15 @@ function ajaxGet(url, callback) {
         console.error("Erreur réseau avec l'URL " + url);
     });
     req.send();
+	} ,
+
+	getRandomInt : function (max) {
+  	return Math.floor(Math.random() * Math.floor(max));
+	}
 }
+
+
+
+tool.ajaxGet('http://localhost/Jamowar/controller/riff.php?player=1', function(rep){
+ 	sessionStorage['riff'] = rep;
+ });

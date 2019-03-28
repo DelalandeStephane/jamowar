@@ -28,18 +28,31 @@
 
 .key {
 	cursor: pointer;
+  p{
+    position:absolute;
+  }
 }
 .white {
   width: 70px;
   height: 300px;
   background: white;
   border: solid black 1px;
+  p {
+    bottom: 30px;
+    padding-left:25px; 
+    color:black;
+
+  }
 }
 .black {
   background: black;
   position: absolute;
   width: 45px;
   height: 170px;
+  p {
+    bottom: 10px;
+    padding-left:15px; 
+  }
 }
 #do-d {
   left: 93px;
@@ -58,7 +71,7 @@
   left: 443px;
 }
 
-.fight-scene {
+#fight-scene {
 	display: flex;
 	justify-content: space-between;
 	margin:30px;
@@ -85,4 +98,28 @@
 	height: 50px;
 	margin:0 20px;
  	margin-top: 90px;
+}
+
+.health-progress {
+  background:green;
+  width: 100%;
+  height: 50px;
+}
+
+#game-ending {
+  margin: auto;
+  margin-top:200px;
+  width:600px;
+  background: rgba(0,0,0,0.5);
+  border-radius:20px; 
+  text-align:center;
+  h2 {
+    padding:20px;
+    font-size: 2em;
+  }
+}
+
+#confirm {
+  margin-top: 50px;
+  text-align: center;
 }

@@ -9,7 +9,8 @@ class GameManager extends Manager
 	}
 	public function riffSelector($id)
 	{
-	    $req = $this->db->query('SELECT * FROM riff WHERE id_player = '.$id);
+	    $req = $this->db->prepare('SELECT * FROM riff WHERE id_player = '.$id);
+	    $req->execute(array($_GET['player']));
 	    return $req;
 	}
 	

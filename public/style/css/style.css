@@ -100,12 +100,19 @@ a {
 }
 
 /* line 12, ../scss/_button.scss */
-.red {
+.red, .btn-game {
   background: #f0082a;
 }
 /* line 14, ../scss/_button.scss */
-.red:hover {
+.red:hover, .btn-game:hover {
   background: #1d88f5;
+}
+
+/* line 19, ../scss/_button.scss */
+.btn-game {
+  display: inline-block;
+  margin: 50px 20px;
+  padding: 20px 30px;
 }
 
 /* line 1, ../scss/_menu.scss */
@@ -251,76 +258,119 @@ a {
 .key {
   cursor: pointer;
 }
+/* line 31, ../scss/_stage.scss */
+.key p {
+  position: absolute;
+}
 
-/* line 32, ../scss/_stage.scss */
+/* line 35, ../scss/_stage.scss */
 .white {
   width: 70px;
   height: 300px;
   background: white;
   border: solid black 1px;
 }
+/* line 40, ../scss/_stage.scss */
+.white p {
+  bottom: 30px;
+  padding-left: 25px;
+  color: black;
+}
 
-/* line 38, ../scss/_stage.scss */
+/* line 47, ../scss/_stage.scss */
 .black {
   background: black;
   position: absolute;
   width: 45px;
   height: 170px;
 }
+/* line 52, ../scss/_stage.scss */
+.black p {
+  bottom: 10px;
+  padding-left: 15px;
+}
 
-/* line 44, ../scss/_stage.scss */
+/* line 57, ../scss/_stage.scss */
 #do-d {
   left: 93px;
 }
 
-/* line 47, ../scss/_stage.scss */
+/* line 60, ../scss/_stage.scss */
 #re-d {
   left: 163px;
 }
 
-/* line 50, ../scss/_stage.scss */
+/* line 63, ../scss/_stage.scss */
 #fa-d {
   left: 304px;
 }
 
-/* line 53, ../scss/_stage.scss */
+/* line 66, ../scss/_stage.scss */
 #sol-d {
   left: 374px;
 }
 
-/* line 57, ../scss/_stage.scss */
+/* line 70, ../scss/_stage.scss */
 #la-d {
   left: 443px;
 }
 
-/* line 61, ../scss/_stage.scss */
-.fight-scene {
+/* line 74, ../scss/_stage.scss */
+#fight-scene {
   display: flex;
   justify-content: space-between;
   margin: 30px;
 }
-/* line 66, ../scss/_stage.scss */
-.fight-scene p {
+/* line 79, ../scss/_stage.scss */
+#fight-scene p {
   color: red;
   font-size: 1.9em;
   margin-top: 100px;
 }
 
-/* line 73, ../scss/_stage.scss */
+/* line 86, ../scss/_stage.scss */
 .block-player {
   display: flex;
 }
-/* line 76, ../scss/_stage.scss */
+/* line 89, ../scss/_stage.scss */
 .block-player img {
   width: 150px;
   height: 150px;
 }
 
-/* line 82, ../scss/_stage.scss */
+/* line 95, ../scss/_stage.scss */
 .health-bar {
   background: black;
   width: 300px;
   height: 50px;
   margin: 0 20px;
   margin-top: 90px;
+}
+
+/* line 103, ../scss/_stage.scss */
+.health-progress {
+  background: green;
+  width: 100%;
+  height: 50px;
+}
+
+/* line 109, ../scss/_stage.scss */
+#game-ending {
+  margin: auto;
+  margin-top: 200px;
+  width: 600px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  text-align: center;
+}
+/* line 116, ../scss/_stage.scss */
+#game-ending h2 {
+  padding: 20px;
+  font-size: 2em;
+}
+
+/* line 122, ../scss/_stage.scss */
+#confirm {
+  margin-top: 50px;
+  text-align: center;
 }

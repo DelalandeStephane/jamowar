@@ -1,12 +1,12 @@
 
 <?php ob_start();?>
-<section class="fight-scene">
-	<div class="block-player">
+<section id="fight-scene">
+	<div class="block-player" id="player1">
 		<img src="public/img/player/p<?= $player ?>s.jpg">
 		<div class="health-bar"><div class="health-progress"></div></div>
 	</div>
 	<p>VS</p>
-	<div class="block-player">
+	<div class="block-player" id="player2">
 		<div class="health-bar"><div class="health-progress"></div></div>
 		<img src="public/img/player/p2s.jpg">
 	</div>
@@ -15,22 +15,22 @@
 
 
 <div id="synth">
-	<div class="key white" id="do"></div>
-	<div class="key black" id="do-d"></div>
-	<div class="key white" id="re"></div>
-	<div class="key black" id="re-d"></div>
-	<div class="key white" id="mi"></div>
-	<div class="key white" id="fa"></div>
-	<div class="key black" id="fa-d"></div>
-	<div class="key white" id="sol"></div>
-	<div class="key black" id="sol-d"></div>
-	<div class="key white" id="la"></div>
-	<div class="key black" id="la-d"></div>
-	<div class="key white" id="si"></div>		
+	<div class="key white" id="do"><p>Q</p></div>
+	<div class="key black" id="do-d"><p>Z</p></div>
+	<div class="key white" id="re"><p>S</p></div>
+	<div class="key black" id="re-d"><p>E</p></div>
+	<div class="key white" id="mi"><p>D</p></div>
+	<div class="key white" id="fa"><p>F</p></div>
+	<div class="key black" id="fa-d"><p>T</p></div>
+	<div class="key white" id="sol"><p>G</p></div>
+	<div class="key black" id="sol-d"><p>Y</p></div>
+	<div class="key white" id="la"><p>H</p></div>
+	<div class="key black" id="la-d"><p>U</p></div>
+	<div class="key white" id="si"><p>J</p></div>		
 </div>
 
 
-<!--<audio id="back-music" src="public/sound/song/song1.mp3" autoplay="" loop=""></audio>-->
+<!--<audio id="back-music" src="public/sound/song/song<?= $player ?>.mp3" autoplay="" loop="" ></audio>-->
 <?php $content = ob_get_clean(); ?>
 <?php $script='<script src="public/js/gameplay.js"></script>' ?>;
 <?php require('template.php');?>

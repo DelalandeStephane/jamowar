@@ -10,9 +10,9 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
 
-    $req = $conn->query('SELECT * FROM riff WHERE id_player =1 ');
+    $req = $conn->prepare('SELECT * FROM riff WHERE id_player =? ');
 
-
+    $req->execute(array($_GET['player']));
     	$riffs = [];
 
 	 while ($data = $req->fetch())
