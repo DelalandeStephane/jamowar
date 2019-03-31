@@ -80,12 +80,26 @@ a {
 }
 
 /* line 16, ../scss/_general.scss */
+.link-blue {
+  display: block;
+  color: #1d88f5;
+  margin-top: 10px;
+}
+
+/* line 22, ../scss/_general.scss */
 .bg {
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 1200px;
   margin: auto;
   min-height: 100vh;
+}
+
+/* line 31, ../scss/_general.scss */
+.alert-form {
+  font-family: arial;
+  color: red;
+  margin-bottom: 20px;
 }
 
 /* line 2, ../scss/_button.scss */
@@ -372,5 +386,35 @@ a {
 /* line 122, ../scss/_stage.scss */
 #confirm {
   margin-top: 50px;
+  text-align: center;
+}
+
+/* line 1, ../scss/_form.scss */
+input {
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}
+
+/* line 7, ../scss/_form.scss */
+form {
+  padding: 50px 0;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  width: 500px;
+}
+
+/* line 17, ../scss/_form.scss */
+.btn-submit {
+  width: 150px;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+}
+
+/* line 23, ../scss/_form.scss */
+.booking-message {
   text-align: center;
 }

@@ -12,6 +12,7 @@
 			<ul>
 				<li ><a href="index.php?action=playerchoice" class="button red">Jouer</a></li>
 				<li ><a href="index.php?action=freemode" class="button red">Mode libre</a></li>
+				<li ><a href="index.php?action=connexion" class="button red">Connexion</a></li>
 			</ul>
 		</nav>
 	</div>

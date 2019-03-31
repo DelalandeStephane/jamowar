@@ -20,6 +20,21 @@ try {
 		elseif($_GET['action'] == 'freemode'){
 			freeMode();
 		}
+		elseif($_GET['action'] == 'connexion'){
+			connexionUser();
+		}
+		elseif($_GET['action'] == 'registration'){
+			registration();
+		}
+		elseif($_GET['action'] == 'send-user'){
+			sendUser(htmlspecialchars($_POST['name']), 
+					htmlspecialchars($_POST['password']),
+					htmlspecialchars($_POST['confirm-password']), 
+					htmlspecialchars($_POST['email']), 
+					htmlspecialchars($_POST['birth-date'])
+			);
+		}
+
 
 		
 		

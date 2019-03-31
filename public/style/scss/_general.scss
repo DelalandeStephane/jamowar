@@ -13,6 +13,12 @@ a {
 	color: white;
 }
 
+.link-blue {
+	display: block;
+	color : $blue;
+	margin-top: 10px;
+}
+
 .bg{
 	background-size: cover;
 	background-repeat:no-repeat;
@@ -22,3 +28,8 @@ a {
 	min-height: 100vh;
 }
 
+.alert-form {
+  font-family: arial;
+  color: red;
+  margin-bottom:20px;
+}
