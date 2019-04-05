@@ -18,6 +18,8 @@
 			</nav>
 		</header>
 	<?= $content ?>
+	</div>
+	<footer><p>test</p></footer>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"
 	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	  crossorigin="anonymous"></script>
@@ -25,6 +27,6 @@
 	  <script src="public/js/music-player.js"></script>
 	  <script src="public/js/main.js"></script>
 	  <?php if(isset($script)){echo $script; } ?>
-</div>
+
 </body>
 </html>

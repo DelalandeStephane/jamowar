@@ -102,6 +102,68 @@ a {
   margin-bottom: 20px;
 }
 
+/* line 37, ../scss/_general.scss */
+.user-profil {
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  margin: auto;
+}
+/* line 41, ../scss/_general.scss */
+.user-profil p, .user-profil label {
+  margin: 20px;
+}
+/* line 44, ../scss/_general.scss */
+.user-profil h3 {
+  text-align: center;
+  margin: 50px;
+}
+/* line 48, ../scss/_general.scss */
+.user-profil img {
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+}
+/* line 53, ../scss/_general.scss */
+.user-profil label {
+  font-size: 0.8em;
+}
+
+/* line 58, ../scss/_general.scss */
+.score-tab {
+  width: 700px;
+  margin: auto;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  border-collapse: separate;
+}
+/* line 64, ../scss/_general.scss */
+.score-tab img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+/* line 69, ../scss/_general.scss */
+.score-tab tr {
+  border: solid 2px red;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f0082a;
+}
+/* line 74, ../scss/_general.scss */
+.score-tab th, .score-tab td {
+  font-size: 1.3em;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 82, ../scss/_general.scss */
+.secondary-title {
+  color: #f0082a;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 100px;
+}
+
 /* line 2, ../scss/_button.scss */
 .button {
   margin: auto;
@@ -152,6 +214,11 @@ a {
   width: 600px;
   height: 80px;
   margin-top: 20px;
+}
+
+/* line 22, ../scss/_menu.scss */
+.score-bg {
+  background: url("../../img/bg/space.gif");
 }
 
 /* line 1, ../scss/_navbar.scss */
@@ -397,7 +464,7 @@ input {
 }
 
 /* line 7, ../scss/_form.scss */
-form {
+.user-form {
   padding: 50px 0;
   margin: auto;
   margin-top: 100px;

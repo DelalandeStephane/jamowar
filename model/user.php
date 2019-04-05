@@ -42,13 +42,13 @@ class User {
 	public  function getPassword() {
 		return $this->password;
 	}
-	public  function getBirthDate() {
+	public  function getBirth_date() {
 		return $this->birthDate;
 	}
 	public  function getEmail() {
 		return $this->email;
 	}
-	public  function getInscriptionDate() {
+	public  function getInscription_Date() {
 		return $this->inscription_date;
 	}
 	public  function getExp() {
@@ -70,13 +70,13 @@ class User {
 	public  function setPassword($password) {
 		$this->password = $password;
 	}
-	public  function setBirthDate($birthDate) {
+	public  function setBirth_date($birthDate) {
 		$this->birthDate = $birthDate;
 	}
 	public  function setEmail($email) {
 		$this->email = $email;
 	}
-	public  function setInscriptionDate($inscriptionDate) {
+	public  function setInscription_date($inscriptionDate) {
 		$this->inscription_date = $inscriptionDate;
 	}
 	public  function setExp($exp) {

@@ -1,12 +1,13 @@
 //Instanciations des deux joueurs.
 var riffs = JSON.parse(sessionStorage['riff']);
 console.log(riffs);
-var player1 = new Player(100,sessionStorage['player']);
-var player2 = new Player(100,sessionStorage['player']);
+var computer = new Player(100,sessionStorage['player']);
+var player = new Player(100,sessionStorage['player']);
 
 //nombre de notes jouées
 var nbPlay = 0;
 
+var computerDeg = 0;
 //  GAMEPLAY
 
 //Lance le riff de debut de partie

@@ -24,5 +24,9 @@ $('.player-selected').on('click', function(e){ // STORY MODE
 		
 	});
 
+		$('.send-point').on('click', function(e){
+			e.preventDefault();
+			$('.form-point').submit();
+	});
 
 });		

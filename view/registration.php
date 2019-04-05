@@ -2,9 +2,12 @@
 
 <?php ob_start();?>
 
-<form method="post" action="index.php?action=send-user">
+<form class="user-form" method="post" action="index.php?action=send-user">
 	<label for="name">pseudo</label><br>
 	<input type="text" name="name" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>"><br>
+	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'name'):?>
+		<p class="alert-form">Ce pseudo est déja pris</p>
+	<?php endif; ?>	
 	<label for="email">Ton email</label><br>
 	<input type="text" name="email" value="<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?>"><br>
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'mail'):?>
@@ -26,7 +29,9 @@
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'pwd'):?>
 		<p class="alert-form">Les deux mots de passe ne sont pas identiques</p>
 	<?php endif; ?>	
+
 	<input type="submit" value="envoyer" class="btn-submit red">
+	
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'missing'):?>
 		<p class="alert-form">Un des champs est manquant</p>
 	<?php endif; ?>	

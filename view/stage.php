@@ -1,17 +1,16 @@
 
 <?php ob_start();?>
 <section id="fight-scene">
-	<div class="block-player" id="player1">
+	<div class="block-player" id="computer">
 		<img src="public/img/player/p<?= $player ?>s.jpg">
 		<div class="health-bar"><div class="health-progress"></div></div>
 	</div>
 	<p>VS</p>
-	<div class="block-player" id="player2">
+	<div class="block-player" id="player">
 		<div class="health-bar"><div class="health-progress"></div></div>
-		<img src="public/img/player/p2s.jpg">
+		<img src="public/img/user/<?= $picture  ?>">
 	</div>
 </section>
-
 
 
 <div id="synth">

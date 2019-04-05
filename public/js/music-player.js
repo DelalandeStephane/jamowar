@@ -145,9 +145,11 @@ var musicPlayer = {
 				var music = new Audio();
 				music.src = 'public/sound/alert/good1.mp3';
 				music.play();
-				player1.health = player1.health-10;
-				 $("#player1 .health-progress").css('width', player1.health+'%');
-				 if(player1.health > 0 ){
+				computer.health = computer.health-10;
+				computerDeg = computerDeg+10;
+				 $("#computer .health-progress").css('width', computer.health+'%');
+				 console.log(computerDeg);
+				 if(computer.health > 0 ){
 				 	setTimeout(function(){
 				 		nbPlay=0;
 				 		musicPlayer.riffSelector();
@@ -162,9 +164,9 @@ var musicPlayer = {
 				var music = new Audio();
 				music.src = 'public/sound/alert/error2.mp3';
 				music.play();
-				player2.health = player2.health-10;
-				 $("#player2 .health-progress").css('width', player2.health+'%');
-				 if(player2.health > 0 ){
+				player.health = player.health-10;
+				 $("#player .health-progress").css('width', player.health+'%');
+				 if(player.health > 0 ){
 				 	setTimeout(function(){
 				 		nbPlay=0;
 				 		musicPlayer.riffRepeat();
@@ -187,24 +189,30 @@ var musicPlayer = {
 			var statutMessage = 'Vous avez perdu ...';
 		}
 		var container = document.createElement('div');
-		container.id ="game-ending";
+			container.id ="game-ending";
 		document.getElementById('fight-scene').after(container);
 
 		var message =document.createElement('h2');
-		message.textContent = statutMessage ;
+			message.textContent = statutMessage ;
 		document.getElementById('game-ending').appendChild(message);
 
-		var retry = document.createElement('a');
-		retry.textContent = 'rejouer';
-		document.getElementById('game-ending').appendChild(retry);
-		retry.href='index.php?action=playerchoice';
-		retry.classList.add('btn-game');
+		//envoi des points
+		var formPoint = document.createElement('form');
+			formPoint.method ='post';
+			formPoint.id = "form-point";
+			formPoint.action = 'index.php?action=up-point';
+		document.getElementById('game-ending').appendChild(formPoint);
 
-		var exit = document.createElement('a');
-		exit.href='index.php';
-		exit.textContent = 'sortir';
-		exit.classList.add('btn-game');
-		document.getElementById('game-ending').appendChild(exit);
-	
+		var points = document.createElement('input');
+			points.type = "hidden";
+			points.value = (player.health*sessionStorage['player'])+computerDeg;
+			points.name = 'win-points';
+		document.getElementById('form-point').appendChild(points);
+
+		var submit = document.createElement('input');
+			submit.type = 'submit';
+		document.getElementById('form-point').appendChild(submit);
 	},		
 }
+
+	
