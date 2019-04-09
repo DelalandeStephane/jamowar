@@ -13,6 +13,7 @@ var computerDeg = 0;
 //Lance le riff de debut de partie
 setTimeout(function(){
 	musicPlayer.riffSelector();
+	musicPlayer.songPlayer(sessionStorage.getItem("player"));
 },1000);
 
 

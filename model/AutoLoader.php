@@ -1,5 +1,5 @@
 <?php
-
+namespace jamowar;
 class AutoLoader {
 
 	 static function register(){
@@ -7,7 +7,7 @@ class AutoLoader {
     }
 
 	static function downloadClass($file) {
- 	$file = str_replace('forteroche', '',$file);
+ 	$file = str_replace('jamowar\\', '',$file);
  	require_once('model/'.lcfirst($file).'.php');
 	}
 

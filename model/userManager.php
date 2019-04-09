@@ -1,4 +1,5 @@
 <?php
+namespace jamowar;
 require('model/Manager.php');
 
 class UserManager extends Manager 
@@ -9,18 +10,20 @@ class UserManager extends Manager
 	}
 	public function insertUser($data)
 	{
-	    $req = $this->db->prepare('INSERT INTO user (name,password,birth_date,email, inscription_date, exp, picture) VALUES (:name, :password, :birth_date, :email, CURDATE(),0, :picture)');
+	    $req = $this->db->prepare('INSERT INTO user (name,password,birth_date,email, inscription_date, exp, picture, user_right) VALUES (:name, :password, :birth_date, :email, CURDATE(),0, :picture,:user_right)');
 	    $req->bindValue(':name', $data->getName());
 	    $req->bindValue(':password', $data->getPassword());
 	    $req->bindValue(':birth_date', $data->getBirth_date());
 	    $req->bindValue(':email', $data->getEmail());
 	    $req->bindValue(':picture', 'anonym.png' );
+	    $req->bindValue(':user_right', 'player' );
 	    $req->execute();
 	}
 	public function getUserList($page){
-
-		$req = $this->db->prepare('SELECT * FROM user ORDER BY exp DESC LIMIT :page,20');
-		$req->bindValue(':page', $page,PDO::PARAM_INT);
+		$start = ($page-1)*20;
+		$req = $this->db->prepare('SELECT * FROM user WHERE user_right = :user ORDER BY exp DESC LIMIT :page,20 ');
+		$req->bindValue(':page', $start,\PDO::PARAM_INT);
+		$req->bindValue(':user','player');
 		$req->execute();
 		while ($data = $req->fetch())
         {
@@ -99,11 +102,25 @@ class UserManager extends Manager
 		$req->execute();
 	}
 	public function userCount(){
-		$req = $this->db->query('SELECT COUNT(*) AS total FROM user');
+		$req = $this->db->prepare('SELECT COUNT(*) AS total FROM user WHERE user_right = :user');
+		$req->bindValue(':user', 'player');
+		$req->execute();
 		$result = $req->fetch();
-		$nbPages = ceil($result['total']/5);
+		$nbPages = ceil($result['total']/20);
 		return $nbPages;
 
+	}
+
+	public function adminDeleteUser($data) {
+		$req =$this->db->prepare('DELETE FROM user WHERE id= :id');
+		$req->bindValue(':id', $data->getId());
+		$req->execute();
+	}
+	public function adminRemovePicture($data) {
+		$req =$this->db->prepare('UPDATE user SET picture = :picture WHERE id= :id');
+		$req->bindValue(':id', $data->getId());
+		$req->bindValue(':picture','anonym.png');
+		$req->execute();
 	}
 	
 }

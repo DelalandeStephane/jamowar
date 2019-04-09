@@ -3,11 +3,17 @@
 <section id="fight-scene">
 	<div class="block-player" id="computer">
 		<img src="public/img/player/p<?= $player ?>s.jpg">
-		<div class="health-bar"><div class="health-progress"></div></div>
+		<div class="block-health">
+			<p><?= $compName ?></p>
+			<div class="health-bar"><div class="health-progress"></div></div>
+		</div>
 	</div>
-	<p>VS</p>
+	<p class="vs">VS</p>
 	<div class="block-player" id="player">
-		<div class="health-bar"><div class="health-progress"></div></div>
+		<div class="block-health">
+			<p><?= $playerName ?></p>
+			<div class="health-bar"><div class="health-progress"></div></div>
+		</div>
 		<img src="public/img/user/<?= $picture  ?>">
 	</div>
 </section>
@@ -27,7 +33,6 @@
 	<div class="key black" id="la-d"><p>U</p></div>
 	<div class="key white" id="si"><p>J</p></div>		
 </div>
-
 
 <!--<audio id="back-music" src="public/sound/song/song<?= $player ?>.mp3" autoplay="" loop="" ></audio>-->
 <?php $content = ob_get_clean(); ?>

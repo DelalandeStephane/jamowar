@@ -65,28 +65,187 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../scss/_general.scss */
+/* line 2, ../scss/_base.scss */
 body {
   background: #160f1e;
   color: white;
   font-family: 'Press Start 2P', cursive;
 }
 
-/* line 10, ../scss/_general.scss */
+/* line 8, ../scss/_base.scss */
 a {
   text-decoration: none;
   font-family: 'Press Start 2P', cursive;
   color: white;
 }
 
-/* line 16, ../scss/_general.scss */
-.link-blue {
-  display: block;
-  color: #1d88f5;
-  margin-top: 10px;
+/* line 13, ../scss/_base.scss */
+h2 {
+  font-size: 2em;
 }
 
-/* line 22, ../scss/_general.scss */
+/* line 17, ../scss/_base.scss */
+p {
+  line-height: 40px;
+}
+
+/* line 21, ../scss/_base.scss */
+input {
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}
+
+/* line 1, ../scss/_layout.scss */
+.user-profil {
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  margin: auto;
+}
+/* line 5, ../scss/_layout.scss */
+.user-profil p, .user-profil label {
+  margin: 20px;
+}
+/* line 8, ../scss/_layout.scss */
+.user-profil h3 {
+  text-align: center;
+  margin: 50px;
+}
+/* line 12, ../scss/_layout.scss */
+.user-profil img {
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+}
+/* line 17, ../scss/_layout.scss */
+.user-profil label {
+  font-size: 0.8em;
+}
+
+/* line 22, ../scss/_layout.scss */
+.score-tab {
+  width: 700px;
+  margin: auto;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  border-collapse: separate;
+}
+/* line 28, ../scss/_layout.scss */
+.score-tab img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+/* line 33, ../scss/_layout.scss */
+.score-tab tr {
+  border: solid 2px red;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f0082a;
+}
+/* line 38, ../scss/_layout.scss */
+.score-tab th, .score-tab td {
+  font-size: 1.3em;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 46, ../scss/_layout.scss */
+.admin-area {
+  text-align: center;
+  margin: auto;
+  max-width: 800px;
+}
+/* line 50, ../scss/_layout.scss */
+.admin-area h2 {
+  margin: 70px 0;
+}
+
+/* line 55, ../scss/_layout.scss */
+.admin-table {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+/* line 58, ../scss/_layout.scss */
+.admin-table img {
+  width: 100px;
+  height: 100px;
+}
+/* line 62, ../scss/_layout.scss */
+.admin-table td, .admin-table th {
+  border: solid 2px green;
+  text-align: center;
+  padding: 5px;
+}
+
+/* line 69, ../scss/_layout.scss */
+.player-definition {
+  border: 10px solid #f0082a;
+  border-radius: 5px;
+  margin: 0 40px;
+}
+/* line 70, ../scss/_layout.scss */
+.player-definition img {
+  width: 200px;
+  height: 200px;
+}
+/* line 74, ../scss/_layout.scss */
+.player-definition figcaption {
+  background: #f0082a;
+  text-align: center;
+  padding: 10px;
+}
+/* line 83, ../scss/_layout.scss */
+.player-definition:hover {
+  border: 10px solid #1d88f5;
+}
+
+/* line 88, ../scss/_layout.scss */
+.secondary-header {
+  background: #160f1e;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 93, ../scss/_layout.scss */
+.secondary-header ul {
+  display: flex;
+  margin-top: 17px;
+}
+/* line 97, ../scss/_layout.scss */
+.secondary-header a {
+  margin-right: 30px;
+}
+/* line 100, ../scss/_layout.scss */
+.secondary-header a:hover {
+  color: #1d88f5;
+}
+
+/* line 106, ../scss/_layout.scss */
+#main-header {
+  margin: auto;
+  width: 600px;
+}
+/* line 110, ../scss/_layout.scss */
+#main-header .logo-header {
+  width: 600px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+/* line 117, ../scss/_layout.scss */
+.menu-bg {
+  background: url("../../img/bg/bg1.jpg");
+}
+/* line 119, ../scss/_layout.scss */
+.menu-bg .button {
+  margin-bottom: 40px;
+}
+/* line 123, ../scss/_layout.scss */
+.menu-bg #main-nav {
+  margin-top: 200px;
+}
+
+/* line 3, ../scss/_module.scss */
 .bg {
   background-size: cover;
   background-repeat: no-repeat;
@@ -95,76 +254,109 @@ a {
   min-height: 100vh;
 }
 
-/* line 31, ../scss/_general.scss */
+/* line 12, ../scss/_module.scss */
+.admin-bg {
+  background: black;
+  color: green;
+}
+
+/* line 17, ../scss/_module.scss */
+.score-bg {
+  background: url("../../img/bg/space.gif");
+}
+
+/* line 21, ../scss/_module.scss */
+.stage-1 {
+  background: url("../../img/bg/bg2.jpg");
+}
+
+/* line 24, ../scss/_module.scss */
+.stage-2 {
+  background: url("../../img/bg/bg3.jpg");
+}
+
+/* line 27, ../scss/_module.scss */
+.stage-3 {
+  background: url("../../img/bg/bg4.jpg");
+}
+
+/* line 33, ../scss/_module.scss */
 .alert-form {
   font-family: arial;
   color: red;
   margin-bottom: 20px;
 }
 
-/* line 37, ../scss/_general.scss */
-.user-profil {
-  background: rgba(0, 0, 0, 0.5);
-  max-width: 900px;
-  margin: auto;
-}
-/* line 41, ../scss/_general.scss */
-.user-profil p, .user-profil label {
-  margin: 20px;
-}
-/* line 44, ../scss/_general.scss */
-.user-profil h3 {
+/* line 39, ../scss/_module.scss */
+.confirm-form {
+  color: green;
+  font-size: 0.9em;
   text-align: center;
-  margin: 50px;
-}
-/* line 48, ../scss/_general.scss */
-.user-profil img {
-  width: 150px;
-  height: 150px;
-  margin-left: 20px;
-}
-/* line 53, ../scss/_general.scss */
-.user-profil label {
-  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-/* line 58, ../scss/_general.scss */
-.score-tab {
-  width: 700px;
+/* line 47, ../scss/_module.scss */
+.user-form {
+  padding: 50px 0;
   margin: auto;
   margin-top: 100px;
-  padding-bottom: 100px;
-  border-collapse: separate;
-}
-/* line 64, ../scss/_general.scss */
-.score-tab img {
-  width: 100px;
-  height: 100px;
-  margin: 10px 0;
-}
-/* line 69, ../scss/_general.scss */
-.score-tab tr {
-  border: solid 2px red;
-  background: rgba(0, 0, 0, 0.8);
-  color: #f0082a;
-}
-/* line 74, ../scss/_general.scss */
-.score-tab th, .score-tab td {
-  font-size: 1.3em;
+  margin-bottom: 50px;
   text-align: center;
-  padding-top: 10px;
-  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 500px;
 }
 
-/* line 82, ../scss/_general.scss */
+/* line 57, ../scss/_module.scss */
+.btn-submit {
+  width: 150px;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+}
+
+/* line 63, ../scss/_module.scss */
+.booking-message {
+  text-align: center;
+}
+
+/* line 69, ../scss/_module.scss */
 .secondary-title {
   color: #f0082a;
-  font-size: 2em;
   text-align: center;
   margin-top: 100px;
 }
 
-/* line 2, ../scss/_button.scss */
+/* line 75, ../scss/_module.scss */
+.logo-navbar {
+  width: 280px;
+  height: 40px;
+}
+
+/* line 81, ../scss/_module.scss */
+.link-blue {
+  display: block;
+  color: #1d88f5;
+  margin-top: 10px;
+}
+
+/* line 87, ../scss/_module.scss */
+.nav-arrow-bar {
+  padding-bottom: 20px;
+}
+
+/* line 90, ../scss/_module.scss */
+.nav-arrow {
+  font-size: 2.5em;
+  color: green;
+}
+
+/* line 95, ../scss/_module.scss */
+#player-select {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+/* line 103, ../scss/_module.scss */
 .button {
   margin: auto;
   display: block;
@@ -175,149 +367,29 @@ a {
   font-size: 1.5em;
 }
 
-/* line 12, ../scss/_button.scss */
+/* line 113, ../scss/_module.scss */
 .red, .btn-game {
   background: #f0082a;
 }
-/* line 14, ../scss/_button.scss */
+/* line 115, ../scss/_module.scss */
 .red:hover, .btn-game:hover {
   background: #1d88f5;
 }
 
-/* line 19, ../scss/_button.scss */
+/* line 120, ../scss/_module.scss */
 .btn-game {
   display: inline-block;
   margin: 50px 20px;
   padding: 20px 30px;
 }
 
-/* line 1, ../scss/_menu.scss */
-.menu-bg {
-  background: url("../../img/bg/bg1.jpg");
-}
-/* line 3, ../scss/_menu.scss */
-.menu-bg .button {
-  margin-bottom: 40px;
-}
-/* line 7, ../scss/_menu.scss */
-.menu-bg #main-nav {
-  margin-top: 200px;
+/* line 127, ../scss/_module.scss */
+.delete-btn {
+  color: red;
+  font-size: 2em;
 }
 
-/* line 11, ../scss/_menu.scss */
-#main-header {
-  margin: auto;
-  width: 600px;
-}
-/* line 15, ../scss/_menu.scss */
-#main-header .logo-header {
-  width: 600px;
-  height: 80px;
-  margin-top: 20px;
-}
-
-/* line 22, ../scss/_menu.scss */
-.score-bg {
-  background: url("../../img/bg/space.gif");
-}
-
-/* line 1, ../scss/_navbar.scss */
-.logo-navbar {
-  width: 280px;
-  height: 40px;
-}
-
-/* line 6, ../scss/_navbar.scss */
-.secondary-header {
-  background: #160f1e;
-  display: flex;
-  justify-content: space-between;
-}
-/* line 11, ../scss/_navbar.scss */
-.secondary-header ul {
-  display: flex;
-  margin-top: 17px;
-}
-/* line 15, ../scss/_navbar.scss */
-.secondary-header a {
-  margin-right: 30px;
-}
-/* line 18, ../scss/_navbar.scss */
-.secondary-header a:hover {
-  color: #1d88f5;
-}
-
-/* line 1, ../scss/_choice.scss */
-#player-select {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-}
-
-/* line 7, ../scss/_choice.scss */
-.player-definition {
-  border: 10px solid #f0082a;
-  border-radius: 5px;
-  margin: 0 40px;
-}
-/* line 8, ../scss/_choice.scss */
-.player-definition img {
-  width: 200px;
-  height: 200px;
-}
-/* line 12, ../scss/_choice.scss */
-.player-definition figcaption {
-  background: #f0082a;
-  text-align: center;
-  padding: 10px;
-}
-/* line 21, ../scss/_choice.scss */
-.player-definition:hover {
-  border: 10px solid #1d88f5;
-}
-
-/* line 29, ../scss/_choice.scss */
-#free-mode #player-select {
-  margin-top: 50px;
-}
-/* line 33, ../scss/_choice.scss */
-#free-mode .player-definition {
-  border: 5px solid #f0082a;
-  border-radius: 5px;
-  margin: 0 40px;
-}
-/* line 34, ../scss/_choice.scss */
-#free-mode .player-definition img {
-  width: 150px;
-  height: 150px;
-}
-/* line 38, ../scss/_choice.scss */
-#free-mode .player-definition figcaption {
-  background: #f0082a;
-  text-align: center;
-  padding: 10px;
-}
-/* line 47, ../scss/_choice.scss */
-#free-mode .player-definition:hover {
-  border: 5px solid #1d88f5;
-}
-
-/* line 1, ../scss/_stage.scss */
-.stage-1 {
-  background: url("../../img/bg/bg2.jpg");
-}
-
-/* line 4, ../scss/_stage.scss */
-.stage-2 {
-  background: url("../../img/bg/bg3.jpg");
-}
-
-/* line 7, ../scss/_stage.scss */
-.stage-3 {
-  background: url("../../img/bg/bg4.jpg");
-}
-
-/* line 11, ../scss/_stage.scss */
+/* line 2, ../scss/_stage.scss */
 #synth {
   display: flex;
   justify-content: center;
@@ -330,112 +402,121 @@ a {
   padding: 20px 45px;
 }
 
-/* line 24, ../scss/_stage.scss */
+/* line 15, ../scss/_stage.scss */
 #free-mode #synth {
   margin-top: 150px;
 }
 
-/* line 29, ../scss/_stage.scss */
+/* line 20, ../scss/_stage.scss */
 .key {
   cursor: pointer;
 }
-/* line 31, ../scss/_stage.scss */
+/* line 22, ../scss/_stage.scss */
 .key p {
   position: absolute;
 }
 
-/* line 35, ../scss/_stage.scss */
+/* line 26, ../scss/_stage.scss */
 .white {
   width: 70px;
   height: 300px;
   background: white;
   border: solid black 1px;
 }
-/* line 40, ../scss/_stage.scss */
+/* line 31, ../scss/_stage.scss */
 .white p {
   bottom: 30px;
   padding-left: 25px;
   color: black;
 }
 
-/* line 47, ../scss/_stage.scss */
+/* line 38, ../scss/_stage.scss */
 .black {
   background: black;
   position: absolute;
   width: 45px;
   height: 170px;
 }
-/* line 52, ../scss/_stage.scss */
+/* line 43, ../scss/_stage.scss */
 .black p {
   bottom: 10px;
   padding-left: 15px;
 }
 
-/* line 57, ../scss/_stage.scss */
+/* line 48, ../scss/_stage.scss */
 #do-d {
   left: 93px;
 }
 
-/* line 60, ../scss/_stage.scss */
+/* line 51, ../scss/_stage.scss */
 #re-d {
   left: 163px;
 }
 
-/* line 63, ../scss/_stage.scss */
+/* line 54, ../scss/_stage.scss */
 #fa-d {
   left: 304px;
 }
 
-/* line 66, ../scss/_stage.scss */
+/* line 57, ../scss/_stage.scss */
 #sol-d {
   left: 374px;
 }
 
-/* line 70, ../scss/_stage.scss */
+/* line 61, ../scss/_stage.scss */
 #la-d {
   left: 443px;
 }
 
-/* line 74, ../scss/_stage.scss */
+/* line 65, ../scss/_stage.scss */
 #fight-scene {
   display: flex;
   justify-content: space-between;
   margin: 30px;
 }
-/* line 79, ../scss/_stage.scss */
-#fight-scene p {
+/* line 70, ../scss/_stage.scss */
+#fight-scene .vs {
   color: red;
   font-size: 1.9em;
   margin-top: 100px;
 }
 
-/* line 86, ../scss/_stage.scss */
+/* line 77, ../scss/_stage.scss */
 .block-player {
   display: flex;
 }
-/* line 89, ../scss/_stage.scss */
+/* line 80, ../scss/_stage.scss */
 .block-player img {
   width: 150px;
   height: 150px;
 }
 
-/* line 95, ../scss/_stage.scss */
+/* line 85, ../scss/_stage.scss */
+.block-health {
+  padding-top: 50px;
+  margin: 0 20px;
+}
+
+/* line 91, ../scss/_stage.scss */
+#player p {
+  text-align: right;
+}
+
+/* line 96, ../scss/_stage.scss */
 .health-bar {
   background: black;
   width: 300px;
   height: 50px;
-  margin: 0 20px;
-  margin-top: 90px;
 }
 
-/* line 103, ../scss/_stage.scss */
+/* line 102, ../scss/_stage.scss */
 .health-progress {
   background: green;
   width: 100%;
   height: 50px;
 }
 
-/* line 109, ../scss/_stage.scss */
+/* line 108, ../scss/_stage.scss */
 #game-ending {
   margin: auto;
   margin-top: 200px;
@@ -444,44 +525,14 @@ a {
   border-radius: 20px;
   text-align: center;
 }
-/* line 116, ../scss/_stage.scss */
+/* line 115, ../scss/_stage.scss */
 #game-ending h2 {
   padding: 20px;
   font-size: 2em;
 }
 
-/* line 122, ../scss/_stage.scss */
+/* line 121, ../scss/_stage.scss */
 #confirm {
   margin-top: 50px;
-  text-align: center;
-}
-
-/* line 1, ../scss/_form.scss */
-input {
-  width: 200px;
-  height: 40px;
-  margin: 20px;
-}
-
-/* line 7, ../scss/_form.scss */
-.user-form {
-  padding: 50px 0;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  width: 500px;
-}
-
-/* line 17, ../scss/_form.scss */
-.btn-submit {
-  width: 150px;
-  font-family: 'Press Start 2P', cursive;
-  border: none;
-}
-
-/* line 23, ../scss/_form.scss */
-.booking-message {
   text-align: center;
 }

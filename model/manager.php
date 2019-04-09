@@ -1,4 +1,6 @@
 <?php
+
+namespace jamowar;
 class Manager {
 	protected function dbConnect ()
 		{

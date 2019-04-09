@@ -1,0 +1,25 @@
+
+body {
+	background:$bg-color;
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+h2 {
+	font-size: 2em;
+}
+
+p {
+	line-height: 40px;
+}
+
+input {
+	width: 200px;
+  	height: 40px;
+  	margin: 20px;
+}

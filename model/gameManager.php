@@ -1,4 +1,6 @@
 <?php
+
+namespace jamowar;
 require('model/Manager.php');
 
 class GameManager extends Manager 

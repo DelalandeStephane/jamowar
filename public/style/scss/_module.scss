@@ -1,0 +1,130 @@
+//module BG
+
+.bg{
+	background-size: cover;
+	background-repeat:no-repeat;
+
+	max-width: 1200px;
+	margin: auto;
+	min-height: 100vh;
+}
+
+.admin-bg {
+	background: black;
+	color:green;
+}
+
+.score-bg {
+	background: url('../../img/bg/space.gif');
+}
+
+.stage-1 {
+	background: url('../../img/bg/bg2.jpg');
+}
+.stage-2 {
+  background: url('../../img/bg/bg3.jpg');
+}
+.stage-3 {
+  background: url('../../img/bg/bg4.jpg');
+}
+
+//module form
+
+.alert-form {
+  font-family: arial;
+  color: red;
+  margin-bottom:20px;
+}
+
+.confirm-form {
+  color:green;
+  font-size:0.9em;
+  text-align: center;
+  background: rgba(0,0,0,0.8);
+}
+
+
+.user-form {
+	padding: 50px 0;
+   margin: auto;
+  margin-top: 100px; 
+  margin-bottom: 50px;
+  text-align: center;
+  background:rgba(0,0,0,0.7);
+  width: 500px;
+}
+
+.btn-submit {
+  width: 150px;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+}
+
+.booking-message {
+	text-align: center;
+}
+
+//module titre
+
+.secondary-title {
+	color: $red;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.logo-navbar {
+	width:280px;
+	height: 40px;
+}
+
+// modules liens
+.link-blue {
+	display: block;
+	color : $blue;
+	margin-top: 10px;
+}
+
+.nav-arrow-bar {
+	padding-bottom: 20px;
+}
+.nav-arrow {
+	font-size:2.5em;
+  	color:green;
+}
+
+#player-select {
+	display: flex;
+	justify-content: center;
+	margin-top: 200px;
+}
+
+//module bouton
+
+.button {
+	margin: auto;
+	display: block;
+	max-width: 400px;
+	height: 45px;
+	text-align: center;
+	padding-top:20px;
+	font-size: 1.5em; 
+}
+
+.red {
+	background: $red;
+		&:hover {
+			background:$blue;
+		}
+}
+
+.btn-game {
+	@extend .red;
+	display: inline-block;
+  	margin: 50px 20px;
+  	padding:20px 30px;
+}
+
+.delete-btn {
+	color: red;
+	font-size: 2em;
+}

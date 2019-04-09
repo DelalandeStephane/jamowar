@@ -13,7 +13,17 @@
 				<ul>
 					<li><a href="?action=home">Accueil</a></li>
 					<li><a href="?action=playerchoice">Jouer</a></li>
-					<li><a href="?action=freemode">Mode libre</a></li>
+					<li><a href="?action=highscores">High scores</a></li>
+					<?php if(isset($_SESSION['user-right']) && $_SESSION['user-right'] == 'player'):?>
+						<li ><a href="index.php?action=profil">Profil</a></li>
+					<?php elseif(isset($_SESSION['user-right']) && $_SESSION['user-right'] == 'admin'):?>
+						<li ><a href="index.php?action=admin">Admin</a></li>
+					<?php else :?>
+						<li ><a href="index.php?action=connexion">Connexion</a></li>
+					<?php endif; ?>
+					<?php if(isset($_SESSION['user-id'])):?>
+						<li ><a href="index.php?action=deconnexion">Déconnexion</a></li>
+					<?php endif; ?>	
 				</ul>
 			</nav>
 		</header>

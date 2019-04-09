@@ -11,9 +11,14 @@
 		<nav id="main-nav">
 			<ul>
 				<li ><a href="index.php?action=playerchoice" class="button red">Jouer</a></li>
-				<li ><a href="index.php?action=freemode" class="button red">Mode libre</a></li>
 				<li ><a href="index.php?action=highscores" class="button red">High scores</a></li>
-				<li ><a href="index.php?action=connexion" class="button red"><?php if(isset($_SESSION['user-id'])){ echo 'profil'; } else{echo 'connexion';} ?></a></li>
+				<?php if(isset($_SESSION['user-right']) && $_SESSION['user-right'] == 'player'):?>
+					<li ><a href="index.php?action=profil" class="button red">Profil</a></li>
+				<?php elseif(isset($_SESSION['user-right']) && $_SESSION['user-right'] == 'admin'):?>
+					<li ><a href="index.php?action=admin" class="button red">Admin</a></li>
+				<?php else :?>
+					<li ><a href="index.php?action=connexion" class="button red">Connexion</a></li>
+					<?php endif; ?>
 				<?php if(isset($_SESSION['user-id'])):?>
 					<li ><a href="index.php?action=deconnexion" class="button red">Déconnexion</a></li>
 				<?php endif; ?>	

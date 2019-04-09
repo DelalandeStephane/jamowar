@@ -1,6 +1,7 @@
 <?php
 
-
+namespace jamowar;
+use  jamowar\User;
 class User {
 
 	private $id;
@@ -8,9 +9,10 @@ class User {
 	private $birthDate;
 	private $password;
 	private $email;
-	private $inscription_date;
+	private $inscriptionDate;
 	private $exp;
 	private $picture;
+	private $userRight;
 
 
 	public function __construct(array $data)
@@ -49,13 +51,16 @@ class User {
 		return $this->email;
 	}
 	public  function getInscription_Date() {
-		return $this->inscription_date;
+		return $this->inscriptionDate;
 	}
 	public  function getExp() {
 		return $this->exp;
 	}
 	public  function getPicture() {
 		return $this->picture;
+	}
+	public  function getUser_right() {
+		return $this->userRight;
 	}
 
 
@@ -77,13 +82,16 @@ class User {
 		$this->email = $email;
 	}
 	public  function setInscription_date($inscriptionDate) {
-		$this->inscription_date = $inscriptionDate;
+		$this->inscriptionDate = $inscriptionDate;
 	}
 	public  function setExp($exp) {
 		$this->exp = $exp;
 	}
 	public  function setPicture($picture) {
 		$this->picture = $picture;
+	}
+	public  function setUser_right($userRight) {
+		$this->userRight = $userRight;
 	}
 
 

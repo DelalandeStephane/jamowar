@@ -4,19 +4,19 @@
 	<a href="?action=stage&player=1" id="player-1" value="1" class="player-selected">
 		<figure class="player-definition">
 			<img src="public/img/player/p1.jpg">
-			<figcaption>Perso 1</figcaption>
+			<figcaption>C.Obvious</figcaption>
 		</figure>
 	</a>
 	<a href="?action=stage&player=2" id="player-2" value="2" class="player-selected">
 		<figure class="player-definition">
 			<img src="public/img/player/p2.jpg">
-			<figcaption>Perso 2</figcaption>
+			<figcaption>Issou</figcaption>
 		</figure>
 	</a>
 	<a href="?action=stage&player=3" id="player-3" value="3" class="player-selected">
 		<figure class="player-definition">
 			<img src="public/img/player/p3.jpg">
-			<figcaption>Perso 3</figcaption>
+			<figcaption>Crazy Joe</figcaption>
 		</figure>
 	</a>
 </section>

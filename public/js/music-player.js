@@ -104,7 +104,7 @@ var musicPlayer = {
 				sessionStorage.setItem("player", 2);
 			break;
 			case 'player-3':
-			sessionStorage.setItem("player", 2);
+			sessionStorage.setItem("player", 3);
 			break;
 			}
 		},
@@ -145,7 +145,7 @@ var musicPlayer = {
 				var music = new Audio();
 				music.src = 'public/sound/alert/good1.mp3';
 				music.play();
-				computer.health = computer.health-10;
+				computer.health = computer.health-100;
 				computerDeg = computerDeg+10;
 				 $("#computer .health-progress").css('width', computer.health+'%');
 				 console.log(computerDeg);
@@ -164,7 +164,7 @@ var musicPlayer = {
 				var music = new Audio();
 				music.src = 'public/sound/alert/error2.mp3';
 				music.play();
-				player.health = player.health-10;
+				player.health = player.health-100;
 				 $("#player .health-progress").css('width', player.health+'%');
 				 if(player.health > 0 ){
 				 	setTimeout(function(){
@@ -181,6 +181,8 @@ var musicPlayer = {
 		}		
 	},
 	endMessage: function (statut) {
+
+		var exp = (player.health*sessionStorage['player'])+computerDeg;
 		if(statut == "win")
 		{
 			var statutMessage = 'Vous avez gagné !';
@@ -192,8 +194,12 @@ var musicPlayer = {
 			container.id ="game-ending";
 		document.getElementById('fight-scene').after(container);
 
-		var message =document.createElement('h2');
-			message.textContent = statutMessage ;
+		var title =document.createElement('h2');
+			title.textContent = statutMessage ;
+		document.getElementById('game-ending').appendChild(title);
+
+		var message =document.createElement('p');
+			message.textContent = 'points gagnés : '+exp ;
 		document.getElementById('game-ending').appendChild(message);
 
 		//envoi des points
@@ -205,14 +211,23 @@ var musicPlayer = {
 
 		var points = document.createElement('input');
 			points.type = "hidden";
-			points.value = (player.health*sessionStorage['player'])+computerDeg;
+			points.value = exp;
 			points.name = 'win-points';
 		document.getElementById('form-point').appendChild(points);
 
 		var submit = document.createElement('input');
 			submit.type = 'submit';
+			submit.value = 'Terminer';
+			submit.classList.add('btn-submit');
+			submit.classList.add('red');
 		document.getElementById('form-point').appendChild(submit);
-	},		
+	},
+	songPlayer: function(player) {
+		const song = new Audio();
+		song.src = 'public/sound/song/song'+player+'.mp3';
+		song.loop= true;
+		song.play();
+	}		
 }
 
 	

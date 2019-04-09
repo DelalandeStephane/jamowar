@@ -4,7 +4,7 @@
 <div class="user-profil">
 	<p>Pseudo: <?= $data->getName(); ?> </p>
 	<p>Votre photo :</p>
-	<img src="public/img/user/<?= $data->getPicture() ?>">
+	<img src="public/img/user/<?= $data->getPicture()?>?filemtime(<?php echo time(); ?>">
 	<form method="post" action="index.php?action=uploadpicture&id=<?= $data->getId()?>" enctype="multipart/form-data">
 	<input type="file" name="picture"><br>
 	<input type="submit" value="envoyer" class="btn-submit red">
@@ -56,10 +56,16 @@
 	<?php endif; ?>
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'wrong-new-pwd'):?>
 		<p class="alert-form">Les deux mots de passe ne sont pas identiques</p>
+	<?php endif; ?>
+	<?php if(isset($_SESSION['success']) && $_SESSION['success'] == 'pwd'):?>
+		<p class="confirm-form">Votre mot de passe a bien été modifié</p>
 	<?php endif; ?>		
 	
 	
 </div>
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php');?>
+<?php
+	unset($_SESSION['success']);
+ require('template.php');
+?>

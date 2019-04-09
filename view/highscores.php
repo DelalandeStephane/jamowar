@@ -1,5 +1,6 @@
 <?php $bgImg ='score-bg' ?>
 <?php ob_start();?>
+
 <h2 class="secondary-title">HIGH SCORES</h2>
 		<table class="score-tab">
 			<tr>

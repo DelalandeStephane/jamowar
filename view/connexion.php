@@ -1,6 +1,9 @@
 <?php $bgImg ='menu-bg' ?>
 
 <?php ob_start();?>
+<?php if(isset($_SESSION['success']) && $_SESSION['success'] == 'user'):?>
+		<p class="confirm-form">Votre compte à bien été créé, <br> connectez vous pour commencer à gagner des points !</p>
+	<?php endif; ?>		
 
 <form class="user-form" method="post" action="index.php?action=profil">
 	<label for="name">Pseudo</label><br>
@@ -18,4 +21,7 @@
 </form>
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php');?>
+<?php 
+require('template.php');
+unset($_SESSION['success']);
+?>

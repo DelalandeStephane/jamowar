@@ -1,0 +1,126 @@
+.user-profil {
+	background:rgba(0,0,0,0.5);
+	max-width: 900px;
+	margin: auto;
+	p,label {
+		margin: 20px;
+	}
+	h3 {
+		text-align: center;
+		margin: 50px;
+	}
+	img {
+		width: 150px;
+		height: 150px;
+		margin-left: 20px;
+	}
+	label {
+		font-size: 0.8em;
+	}
+}
+
+.score-tab {
+	width:700px;
+	margin: auto;
+	margin-top: 100px;
+	padding-bottom: 100px;
+	border-collapse: separate;
+	img {
+		width: 100px;
+		height: 100px;
+		margin: 10px 0;
+	}
+	tr {
+		border:solid 2px red;
+		background:rgba(0,0,0,0.8);
+		color:$red;
+	}
+	th, td {
+		font-size:1.3em;
+		text-align: center;
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.admin-area {
+	text-align: center;
+	margin: auto;
+	max-width: 800px;
+	h2 {
+		margin: 70px 0;
+	}
+}
+
+.admin-table {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	img {
+		width: 100px;
+		height: 100px;
+	}
+	td, th {
+		border: solid 2px green;
+		text-align: center;
+		padding:5px;
+	}
+}
+
+.player-definition {
+	img {
+		width: 200px;
+		height: 200px;
+	}
+	figcaption {
+		background: $red;
+		text-align: center;
+		padding: 10px;
+	}
+	border:10px solid $red;
+	border-radius:5px;
+	margin:0 40px;
+
+	&:hover{
+		border:10px solid $blue;
+	}	
+}
+
+.secondary-header {
+	background: #160f1e;
+	display: flex;
+	justify-content: space-between;
+
+	ul {
+		display: flex;
+		margin-top: 17px;
+	}
+	a {
+		margin-right: 30px;
+
+		&:hover {
+			color:$blue;
+		}
+	}
+}
+
+#main-header {
+	margin: auto;
+	width: 600px;
+
+	.logo-header {	  
+		width: 600px;
+	  	height: 80px;
+	  	margin-top: 20px;	
+	}
+}
+
+.menu-bg {
+	background: url('../../img/bg/bg1.jpg');
+	.button {
+		margin-bottom: 40px;
+	}
+
+	#main-nav {
+		margin-top: 200px;
+	}
+}
