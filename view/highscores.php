@@ -15,7 +15,7 @@
 	        { ?>
 	        	<tr>
 	        		<td><?= $place ?></td>
-	        		<td><img src="public/img/user/<?= $user->getPicture() ?>"></td>
+	        		<td><img src="public/img/user/<?= $user->getPicture() ?>" alt="image joueur"></td>
 	        		<td><?= $user->getName() ?></td>
 	        		<td><?= $user->getExp() ?></td>
 	        	</tr>

@@ -1,5 +1,4 @@
 <?php
-require'mail.php';
 use  jamowar\UserManager;
 use  jamowar\User;
 
@@ -25,7 +24,6 @@ function sendUser ($name,$password,$confirmPwd,$email,$birthDate) {
 			header('Location: index.php?action=registration');
 		}
 		else {
-
 			unset($_SESSION['error']);
 			unset($_SESSION['name']);
 			unset($_SESSION['password']);
@@ -51,7 +49,6 @@ function sendUser ($name,$password,$confirmPwd,$email,$birthDate) {
 		$_SESSION['birthDate'] = $birthDate;
 		header('Location: index.php?action=registration');	
 	}
-	
 }
 
 function userAccess($pseudo,$userpw)

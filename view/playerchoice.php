@@ -1,25 +1,26 @@
 <?php $bgImg ='menu-bg' ?>
 <?php ob_start();?>
+<p class="inform-text">Sélectionner votre adversaire</p>
 <section id="player-select">
-	<a href="?action=stage&player=1" id="player-1" value="1" class="player-selected">
-		<figure class="player-definition">
-			<img src="public/img/player/p1.jpg">
-			<figcaption>C.Obvious</figcaption>
+		<figure class="player-definition" id="player-1">
+			<img src="public/img/player/p1.jpg" alt="image adversaire">
+			<figcaption><p>C.Obvious<br>Niveau 1</p></figcaption>
 		</figure>
-	</a>
-	<a href="?action=stage&player=2" id="player-2" value="2" class="player-selected">
-		<figure class="player-definition">
-			<img src="public/img/player/p2.jpg">
-			<figcaption>Issou</figcaption>
+		<figure class="player-definition" id="player-2">
+			<img src="public/img/player/p2.jpg" alt="image adversaire">
+			<figcaption><p>Issou<br>Niveau 2</p></figcaption>
 		</figure>
-	</a>
-	<a href="?action=stage&player=3" id="player-3" value="3" class="player-selected">
-		<figure class="player-definition">
-			<img src="public/img/player/p3.jpg">
-			<figcaption>Crazy Joe</figcaption>
+		<figure class="player-definition" id="player-3">
+			<img src="public/img/player/p3.jpg" alt="image adversaire">
+			<figcaption><p>Crazy Joe<br>Niveau 3</p></figcaption>
 		</figure>
-	</a>
 </section>
+<?php if(!isset($_SESSION['user-id'])):?>
+	<div class="connexion-block">
+		<p>Pensez à vous connecter</p>
+		<a href="index.php?action=connexion" class="link-blue">connexion</a>
+	</div>
+<?php endif; ?>
 <div id="confirm"></div>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php');?>

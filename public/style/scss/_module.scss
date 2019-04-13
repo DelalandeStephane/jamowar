@@ -8,16 +8,13 @@
 	margin: auto;
 	min-height: 100vh;
 }
-
 .admin-bg {
 	background: black;
 	color:green;
 }
-
 .score-bg {
 	background: url('../../img/bg/space.gif');
 }
-
 .stage-1 {
 	background: url('../../img/bg/bg2.jpg');
 }
@@ -35,35 +32,32 @@
   color: red;
   margin-bottom:20px;
 }
-
 .confirm-form {
   color:green;
   font-size:0.9em;
   text-align: center;
   background: rgba(0,0,0,0.8);
 }
-
-
 .user-form {
 	padding: 50px 0;
    margin: auto;
   margin-top: 100px; 
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   text-align: center;
   background:rgba(0,0,0,0.7);
-  width: 500px;
+  max-width: 500px;
 }
-
 .btn-submit {
   width: 150px;
   font-family: 'Press Start 2P', cursive;
   border: none;
 }
-
 .booking-message {
 	text-align: center;
 }
-
+.block-form {
+	border:solid 5px $red;
+}
 //module titre
 
 .secondary-title {
@@ -71,19 +65,17 @@
 	text-align: center;
 	margin-top: 100px;
 }
-
 .logo-navbar {
 	width:280px;
 	height: 40px;
 }
-
 // modules liens
 .link-blue {
 	display: block;
 	color : $blue;
 	margin-top: 10px;
+	padding-bottom: 10px;
 }
-
 .nav-arrow-bar {
 	padding-bottom: 20px;
 }
@@ -91,13 +83,6 @@
 	font-size:2.5em;
   	color:green;
 }
-
-#player-select {
-	display: flex;
-	justify-content: center;
-	margin-top: 200px;
-}
-
 //module bouton
 
 .button {
@@ -109,22 +94,57 @@
 	padding-top:20px;
 	font-size: 1.5em; 
 }
-
 .red {
 	background: $red;
 		&:hover {
 			background:$blue;
 		}
 }
-
 .btn-game {
 	@extend .red;
 	display: inline-block;
   	margin: 50px 20px;
   	padding:20px 30px;
 }
-
 .delete-btn {
 	color: red;
 	font-size: 2em;
+}
+.player-definition {
+	img {
+		width: 200px;
+		height: 200px;
+	}
+	figcaption {
+		background: $red;
+		text-align: center;
+		padding: 10px;
+	}
+	cursor: pointer;
+	border:10px solid $red;
+	border-radius:5px;
+	margin:0 40px;
+	margin-top: 20px;
+
+	&:hover{
+		border:10px solid $blue;
+	}	
+}
+#menu {
+	display: none;
+}
+.inform-text {
+	font-size: 1.7em;
+	text-align: center;
+	margin: 100px 10px;
+}
+.connexion-block {
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+	max-width: 350px;
+	background:rgba(0,0,0,0.5);
+	p {
+		font-size: 0.8em;
+	}
 }

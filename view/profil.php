@@ -2,42 +2,47 @@
 
 <?php ob_start();?>
 <div class="user-profil">
-	<p>Pseudo: <?= $data->getName(); ?> </p>
-	<p>Votre photo :</p>
-	<img src="public/img/user/<?= $data->getPicture()?>?filemtime(<?php echo time(); ?>">
-	<form method="post" action="index.php?action=uploadpicture&id=<?= $data->getId()?>" enctype="multipart/form-data">
-	<input type="file" name="picture"><br>
-	<input type="submit" value="envoyer" class="btn-submit red">
-	</form>
+	<div class="block-form">
+		<p>Pseudo: <?= $data->getName(); ?> </p>
+		<p>Votre photo :</p>
+		<img src="public/img/user/<?= $data->getPicture()?>?filemtime(<?php echo time(); ?>" alt="votre photo">
+		<form method="post" action="index.php?action=uploadpicture&id=<?= $data->getId()?>" enctype="multipart/form-data">
+		<input type="file" name="picture"><br>
+		<input type="submit" value="envoyer" class="btn-submit red">
+		</form>
 
-	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'pictureExt'):?>
-		<p class="alert-form">l'extension du fichier est incorrect</p>
-	<?php endif; ?>	
-	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'trasnfert'):?>
-		<p class="alert-form">Le trasnfert à échouer</p>
-	<?php endif; ?>
-	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'pictureSize'):?>
-		<p class="alert-form">Le poids de l'image</p>
-	<?php endif; ?>
+		<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'pictureExt'):?>
+			<p class="alert-form">l'extension du fichier est incorrect</p>
+		<?php endif; ?>	
+		<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'trasnfert'):?>
+			<p class="alert-form">Le trasnfert à échouer</p>
+		<?php endif; ?>
+		<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'pictureSize'):?>
+			<p class="alert-form">Le poids de l'image</p>
+		<?php endif; ?>
 
-	<p>Votre score : <?= $data->getExp(); ?></p>
-	<p>date d'inscription: <?= $data->getInscription_date(); ?>  </p>
-
+		<p>Votre score : <?= $data->getExp(); ?></p>
+		<p>date d'inscription: <?= $data->getInscription_date(); ?>  </p>
+	</div>
 	<h3>informations personnelles</h3>
-	<form method="post" action="index.php?action=update-email&id=<?= $data->getId()?>">
-		<p>votre adresse mail : <?= $data->getEmail(); ?></p>
-		<label>Changer votre adresse mail</label>
-		<br>
-		<input type="text" name="mail"><br>
-		<input type="submit" name="" class="btn-submit red">
+	<div class="block-form">
+		<form method="post" action="index.php?action=update-email&id=<?= $data->getId()?>">
+			<p>votre adresse mail</p>
+			<p class="word-fix"><?= $data->getEmail(); ?></p>
+			<label>Changer votre adresse mail</label>
+			<br>
+			<input type="text" name="mail"><br>
+			<input type="submit" name="" class="btn-submit red">
 
-	</form>
-	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'mail-empty'):?>
-		<p class="alert-form">Le champ est vide</p>
-	<?php endif; ?>	
-	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'mail-format'):?>
-		<p class="alert-form">le format de l'adresse mail est incorrect</p>
-	<?php endif; ?>	
+		</form>
+		<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'mail-empty'):?>
+			<p class="alert-form">Le champ est vide</p>
+		<?php endif; ?>	
+		<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'mail-format'):?>
+			<p class="alert-form">le format de l'adresse mail est incorrect</p>
+		<?php endif; ?>
+	</div>
+	<div class="block-form">
 	<form method="post" action="index.php?action=updatePwd&id=<?= $data->getId()?>">
 		<p>Changer votre mot de passe</p>
 		<label>Votre ancien mot de passe</label><br>
@@ -60,7 +65,7 @@
 	<?php if(isset($_SESSION['success']) && $_SESSION['success'] == 'pwd'):?>
 		<p class="confirm-form">Votre mot de passe a bien été modifié</p>
 	<?php endif; ?>		
-	
+	</div>	
 	
 </div>
 

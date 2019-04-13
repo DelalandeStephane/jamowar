@@ -95,7 +95,7 @@ var musicPlayer = {
 			return playedKey;		
 		},
 		// Select player and sounds instrument
-		soundSelector: function(player) {
+		playerSelect: function(player) {
 			switch(player) {
 			case 'player-1':
 				sessionStorage.setItem("player", 1);
@@ -115,7 +115,7 @@ var musicPlayer = {
 			console.log(notes);
 
 			var music = new Audio();
-			music.src = riff.sound;
+			music.src = riff.sound+".mp3";
 			music.play();
 
 			const dataKeys = notes; //Liste des notes
@@ -125,7 +125,7 @@ var musicPlayer = {
 		},
 		riffRepeat : function () {
 			var music = new Audio();
-			music.src = sessionStorage['sound'];
+			music.src = sessionStorage['sound']+".mp3";
 			music.play();
 		},
 		//compare played notes with real notes 
@@ -145,10 +145,9 @@ var musicPlayer = {
 				var music = new Audio();
 				music.src = 'public/sound/alert/good1.mp3';
 				music.play();
-				computer.health = computer.health-100;
+				computer.health = computer.health-10;
 				computerDeg = computerDeg+10;
 				 $("#computer .health-progress").css('width', computer.health+'%');
-				 console.log(computerDeg);
 				 if(computer.health > 0 ){
 				 	setTimeout(function(){
 				 		nbPlay=0;
@@ -164,7 +163,7 @@ var musicPlayer = {
 				var music = new Audio();
 				music.src = 'public/sound/alert/error2.mp3';
 				music.play();
-				player.health = player.health-100;
+				player.health = player.health-10;
 				 $("#player .health-progress").css('width', player.health+'%');
 				 if(player.health > 0 ){
 				 	setTimeout(function(){

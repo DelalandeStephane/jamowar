@@ -1,7 +1,7 @@
 <?php
 
 namespace jamowar;
-require('model/Manager.php');
+require('manager.php');
 
 class GameManager extends Manager 
 {
@@ -11,9 +11,20 @@ class GameManager extends Manager
 	}
 	public function riffSelector($id)
 	{
-	    $req = $this->db->prepare('SELECT * FROM riff WHERE id_player = '.$id);
+	    $req = $this->db->prepare('SELECT * FROM riff WHERE id_player =? ');
+
 	    $req->execute(array($_GET['player']));
-	    return $req;
+	    	$riffs = [];
+
+		 while ($data = $req->fetch())
+	        {
+	        	array_push($riffs,[
+	        		'music_note' => $data['music_note'],
+	        		'sound' => $data['sound_url']
+	        	]);
+			}
+			return  json_encode($riffs);
+
 	}
 	
 }

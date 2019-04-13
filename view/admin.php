@@ -21,7 +21,7 @@
 		        	
 		        { ?>
 		        	<tr>
-		        		<td><a href="index.php?action=remove-picture&id=<?= $user->getId() ?>" class="update-btn"><img src="public/img/user/<?= $user->getPicture() ?>"></a></td>
+		        		<td><a href="index.php?action=remove-picture&id=<?= $user->getId() ?>" class="update-btn"><img src="public/img/user/<?= $user->getPicture() ?>" alt="image joueur"></a></td>
 		        		<td><?= $user->getId() ?></td>
 		        		<td><?= $user->getName() ?></td>
 		        		<td><?= $user->getExp() ?></td>

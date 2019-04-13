@@ -2,7 +2,7 @@
 <?php ob_start();?>
 <section id="fight-scene">
 	<div class="block-player" id="computer">
-		<img src="public/img/player/p<?= $player ?>s.jpg">
+		<img src="public/img/player/p<?= $player ?>s.jpg" alt="photo adversaire">
 		<div class="block-health">
 			<p><?= $compName ?></p>
 			<div class="health-bar"><div class="health-progress"></div></div>
@@ -14,7 +14,7 @@
 			<p><?= $playerName ?></p>
 			<div class="health-bar"><div class="health-progress"></div></div>
 		</div>
-		<img src="public/img/user/<?= $picture  ?>">
+		<img src="public/img/user/<?= $picture  ?>" alt="votre photo">
 	</div>
 </section>
 
@@ -36,5 +36,5 @@
 
 <!--<audio id="back-music" src="public/sound/song/song<?= $player ?>.mp3" autoplay="" loop="" ></audio>-->
 <?php $content = ob_get_clean(); ?>
-<?php $script='<script src="public/js/gameplay.js"></script>' ?>;
+<?php $script='<script src="public/js/gameplay.js"></script>' ?>
 <?php require('template.php');?>

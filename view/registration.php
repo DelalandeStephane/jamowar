@@ -1,15 +1,15 @@
 <?php $bgImg ='menu-bg' ?>
 
 <?php ob_start();?>
-
+<p class="inform-text">Formulaire d'inscription</p>
 <form class="user-form" method="post" action="index.php?action=send-user">
 	<label for="name">pseudo</label><br>
-	<input type="text" name="name" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>"><br>
+	<input type="text" name="name" id="name" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>"><br>
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'name'):?>
 		<p class="alert-form">Ce pseudo est déja pris</p>
 	<?php endif; ?>	
 	<label for="email">Ton email</label><br>
-	<input type="text" name="email" value="<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?>"><br>
+	<input type="text" name="email" id="email" value="<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?>"><br>
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'mail'):?>
 		<p class="alert-form">l'adresse mail n'est pas conforme</p>
 	<?php endif; ?>	
@@ -20,12 +20,12 @@
 	<?php endif; ?>	
 
 	<label for="password">mot de passe</label><br>
-	<input type="password" name="password" value="<?php if(isset($_SESSION['password'])){echo $_SESSION['password'];} ?>"><br>
+	<input type="password" name="password" id="password" value="<?php if(isset($_SESSION['password'])){echo $_SESSION['password'];} ?>"><br>
 
 
 
 	<label for="confirm-password"> Confirmez votre mot de passe</label><br>
-	<input type="password" name="confirm-password"><br>
+	<input type="password" name="confirm-password" id="confirm-password"><br>
 	<?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'pwd'):?>
 		<p class="alert-form">Les deux mots de passe ne sont pas identiques</p>
 	<?php endif; ?>	

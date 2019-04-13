@@ -1,0 +1,225 @@
+@media screen and (max-width: 1090px)
+{
+	//Stage
+	.block-player {
+		flex-direction: column;
+	}
+	#player {
+		flex-direction: column-reverse;
+		align-items: flex-end;
+	}
+	.block-health {
+	    padding-top: 0;
+	    margin:0 0;
+	}
+}
+@media screen and (max-width: 930px)
+{
+	//barre de navigation secondaire
+    .secondary-header {
+    	flex-direction: column;
+    	align-items: center;
+    	height: 70px;
+		ul {
+			display: flex;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		a {
+			font-size: 0.9em;
+			margin-right: 20px;
+		}
+	}
+	.logo-navbar {
+		width:200px;
+		height: 30px;
+	}
+
+	// selection joueur
+	.player-definition {
+		figcaption {
+			text-align: center;
+			padding: 10px;
+		}
+		border-radius:5px;
+		margin:0 20px;
+	}
+	.player-selected {
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 780px)
+{
+	//stage
+	.health-bar {
+		background:black;
+		width: 200px;
+		height: 30px;
+	}
+	//high scores
+	.score-tab {
+		width: unset;
+		max-width:700px;
+	}
+}
+
+@media screen and (max-width: 570px)
+{
+	//menu principal
+	#menu {
+		display: block;
+		width: 25px;
+		min-height: 25px;
+		margin-right: 20px;
+	}
+	#main-header {
+		width: 340px;
+		.logo-header {	  
+			width: 340px;
+		  	height: 50px;
+		  	margin-top: 20px;	
+		}
+	}
+	.button {
+		max-width: 300px;
+		height: 35px;
+		padding-top:20px;
+		font-size: 1.1em; 
+	}
+	#main-nav {
+		margin-top: 100px;
+	}
+	//menu secondaire
+	.secondary-header {
+		flex-direction: row;
+		height: 50px;
+	}
+	.secondary-nav {
+		display: none;
+		ul{
+			display: block;
+		    position: absolute;
+		    background: red;
+		    width:100%;
+		    text-align: center;
+		    left: 0;
+		    top:40px;
+		}
+		li {
+			border-bottom: 2px solid black;
+			height: 50px;
+			width: inherit;
+
+		}
+		a{
+			display: block;
+			width: inherit;
+			height: 100%;
+			padding-top:20px; 
+		}
+	}
+	.logo-navbar {
+		margin-left: 10px;
+	}
+	// player choice
+	#player-select {
+	margin-top: 100px;
+	}
+
+	// stage
+	#fight-scene {
+		margin:10px;
+	}
+	.vs {
+		font-size: 1.5em;
+		margin-top: 50px;
+	}
+	.block-player {
+		img {
+			width:100px;
+			height: 100px;
+		}
+	}
+	.health-bar {
+		background:black;
+		width: 130px;
+		height: 20px;
+	}
+  #synth {
+    width: 350px;
+    margin-top: 200px;
+    background: none;
+    padding: 0;
+  }
+  .white {
+    width: 50px;
+    height: 250px;
+  }
+  .white p {
+   	display: none;
+  }
+  .black {
+    width: 40px;
+    height: 140px;
+  }
+  .black p {
+    display: none;
+  }
+  #do-d {
+    left: 29px;
+  }
+  #re-d {
+    left: 81px;
+  }
+  #fa-d {
+    left: 180px;
+  }
+  #sol-d {
+    left: 231px;
+  }
+  #la-d {
+    left: 281px;
+  }
+  #game-ending {
+	  margin: auto;
+	  margin-top:200px;
+	  background: rgba(0,0,0,0.5);
+	  border-radius:20px; 
+	  text-align:center;
+	  h2 {
+	    padding:20px;
+	    font-size: 1.5em;
+	  }
+	}
+	//profil
+	.user-profil {
+		text-align: center;
+	}
+	.word-fix {
+		word-break: break-all;
+	}
+	//high scores
+	.score-tab {
+		padding:20px;
+		margin-top: 50px;
+		padding-bottom: 100px;
+		border-collapse: separate;
+		img {
+			width: 80px;
+			height: 80px;
+			margin: 5px 0;
+		}
+		tr {
+			border:solid 2px red;
+			background:rgba(0,0,0,0.8);
+		}
+		th, td {
+			font-size:0.8em;
+			text-align: center;
+			padding-top: 10px;
+			padding-right:5px;
+			margin-bottom: 10px;
+		}
+	}
+}

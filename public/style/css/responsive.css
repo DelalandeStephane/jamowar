@@ -1,0 +1,280 @@
+@media screen and (max-width: 1090px) {
+  /* line 4, ../scss/responsive.scss */
+  .block-player {
+    flex-direction: column;
+  }
+
+  /* line 7, ../scss/responsive.scss */
+  #player {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  /* line 11, ../scss/responsive.scss */
+  .block-health {
+    padding-top: 0;
+    margin: 0 0;
+  }
+}
+@media screen and (max-width: 930px) {
+  /* line 19, ../scss/responsive.scss */
+  .secondary-header {
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+  }
+  /* line 23, ../scss/responsive.scss */
+  .secondary-header ul {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 28, ../scss/responsive.scss */
+  .secondary-header a {
+    font-size: 0.9em;
+    margin-right: 20px;
+  }
+
+  /* line 33, ../scss/responsive.scss */
+  .logo-navbar {
+    width: 200px;
+    height: 30px;
+  }
+
+  /* line 39, ../scss/responsive.scss */
+  .player-definition {
+    border-radius: 5px;
+    margin: 0 20px;
+  }
+  /* line 40, ../scss/responsive.scss */
+  .player-definition figcaption {
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* line 47, ../scss/responsive.scss */
+  .player-selected {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 780px) {
+  /* line 55, ../scss/responsive.scss */
+  .health-bar {
+    background: black;
+    width: 200px;
+    height: 30px;
+  }
+
+  /* line 61, ../scss/responsive.scss */
+  .score-tab {
+    width: unset;
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 570px) {
+  /* line 70, ../scss/responsive.scss */
+  #menu {
+    display: block;
+    width: 25px;
+    min-height: 25px;
+    margin-right: 20px;
+  }
+
+  /* line 76, ../scss/responsive.scss */
+  #main-header {
+    width: 340px;
+  }
+  /* line 78, ../scss/responsive.scss */
+  #main-header .logo-header {
+    width: 340px;
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  /* line 84, ../scss/responsive.scss */
+  .button {
+    max-width: 300px;
+    height: 35px;
+    padding-top: 20px;
+    font-size: 1.1em;
+  }
+
+  /* line 90, ../scss/responsive.scss */
+  #main-nav {
+    margin-top: 100px;
+  }
+
+  /* line 94, ../scss/responsive.scss */
+  .secondary-header {
+    flex-direction: row;
+    height: 50px;
+  }
+
+  /* line 98, ../scss/responsive.scss */
+  .secondary-nav {
+    display: none;
+  }
+  /* line 100, ../scss/responsive.scss */
+  .secondary-nav ul {
+    display: block;
+    position: absolute;
+    background: red;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 40px;
+  }
+  /* line 109, ../scss/responsive.scss */
+  .secondary-nav li {
+    border-bottom: 2px solid black;
+    height: 50px;
+    width: inherit;
+  }
+  /* line 115, ../scss/responsive.scss */
+  .secondary-nav a {
+    display: block;
+    width: inherit;
+    height: 100%;
+    padding-top: 20px;
+  }
+
+  /* line 122, ../scss/responsive.scss */
+  .logo-navbar {
+    margin-left: 10px;
+  }
+
+  /* line 126, ../scss/responsive.scss */
+  #player-select {
+    margin-top: 100px;
+  }
+
+  /* line 131, ../scss/responsive.scss */
+  #fight-scene {
+    margin: 10px;
+  }
+
+  /* line 134, ../scss/responsive.scss */
+  .vs {
+    font-size: 1.5em;
+    margin-top: 50px;
+  }
+
+  /* line 139, ../scss/responsive.scss */
+  .block-player img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* line 144, ../scss/responsive.scss */
+  .health-bar {
+    background: black;
+    width: 130px;
+    height: 20px;
+  }
+
+  /* line 149, ../scss/responsive.scss */
+  #synth {
+    width: 350px;
+    margin-top: 200px;
+    background: none;
+    padding: 0;
+  }
+
+  /* line 155, ../scss/responsive.scss */
+  .white {
+    width: 50px;
+    height: 250px;
+  }
+
+  /* line 159, ../scss/responsive.scss */
+  .white p {
+    display: none;
+  }
+
+  /* line 162, ../scss/responsive.scss */
+  .black {
+    width: 40px;
+    height: 140px;
+  }
+
+  /* line 166, ../scss/responsive.scss */
+  .black p {
+    display: none;
+  }
+
+  /* line 169, ../scss/responsive.scss */
+  #do-d {
+    left: 29px;
+  }
+
+  /* line 172, ../scss/responsive.scss */
+  #re-d {
+    left: 81px;
+  }
+
+  /* line 175, ../scss/responsive.scss */
+  #fa-d {
+    left: 180px;
+  }
+
+  /* line 178, ../scss/responsive.scss */
+  #sol-d {
+    left: 231px;
+  }
+
+  /* line 181, ../scss/responsive.scss */
+  #la-d {
+    left: 281px;
+  }
+
+  /* line 184, ../scss/responsive.scss */
+  #game-ending {
+    margin: auto;
+    margin-top: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+  }
+  /* line 190, ../scss/responsive.scss */
+  #game-ending h2 {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+
+  /* line 196, ../scss/responsive.scss */
+  .user-profil {
+    text-align: center;
+  }
+
+  /* line 199, ../scss/responsive.scss */
+  .word-fix {
+    word-break: break-all;
+  }
+
+  /* line 203, ../scss/responsive.scss */
+  .score-tab {
+    padding: 20px;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    border-collapse: separate;
+  }
+  /* line 208, ../scss/responsive.scss */
+  .score-tab img {
+    width: 80px;
+    height: 80px;
+    margin: 5px 0;
+  }
+  /* line 213, ../scss/responsive.scss */
+  .score-tab tr {
+    border: solid 2px red;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  /* line 217, ../scss/responsive.scss */
+  .score-tab th, .score-tab td {
+    font-size: 0.8em;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+  }
+}

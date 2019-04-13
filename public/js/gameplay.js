@@ -1,6 +1,7 @@
 //Instanciations des deux joueurs.
 var riffs = JSON.parse(sessionStorage['riff']);
 console.log(riffs);
+
 var computer = new Player(100,sessionStorage['player']);
 var player = new Player(100,sessionStorage['player']);
 
